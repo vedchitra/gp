@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | ग्रामपंचायत डिजिटल सेवा</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary: #FF9933; --secondary: #138808; --blue: #000080; --light: #f4f4f4; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+        
+         
+        .top-bar { background: var(--blue); color: white; padding: 5px 20px; font-size: 14px; display: flex; justify-content: space-between; }
+        .header { background: white; padding: 15px 20px; display: flex; align-items: center; border-bottom: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo { width: 80px; margin-right: 15px; }
+        .title h1 { margin: 0; font-size: 24px; color: #333; }
+        .title p { margin: 0; font-size: 14px; color: #666; }
+
+         
+        .nav { background: var(--primary); overflow: auto; white-space: nowrap; }
+        .nav a { display: inline-block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        .nav a:hover, .nav a.active { background-color: #cc7a00; }
+        
+         
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; min-height: 500px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        
+         
+        .section-title { color: var(--blue); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; margin-top: 30px; }
+        .content-text { font-size: 18px; line-height: 1.6; color: #444; margin-bottom: 20px; white-space: pre-wrap; }
+        .content-img { text-align: center; margin: 20px 0; }
+        .content-img img { max-width: 100%; border-radius: 8px; border: 3px solid #eee; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+         
+        .person-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; display: inline-block; width: 200px; margin: 10px; background: #fff; vertical-align: top; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .person-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 2px solid var(--primary); }
+        .person-card h3 { margin: 5px 0; font-size: 18px; color: var(--blue); }
+        .person-card p { color: #666; font-size: 14px; }
+        .btn-call { display: block; background: var(--secondary); color: white; padding: 5px; text-decoration: none; border-radius: 4px; margin-top: 5px; }
+
+         
+        .download-btn { display: block; background: #dc3545; color: white; padding: 12px; text-align: center; text-decoration: none; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+        .download-btn:hover { background: #c82333; }
+
+         
+        .footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .footer p { margin: 5px 0; font-size: 14px; }
+        .footer-links a { color: #FF9933; margin: 0 10px; text-decoration: none; }
+
+         
+        @media (max-width: 600px) {
+            .header { flex-direction: column; text-align: center; }
+            .logo { margin: 0 0 10px 0; }
+            .nav a { padding: 10px 15px; font-size: 14px; }
+            .person-card { width: 100%; display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span><i class="fas fa-phone"></i> आपत्कालीन संपर्क: 112</span>
+        <span><i class="fas fa-language"></i> मराठी / English</span>
+    </div>
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
+        <div class="title">
+            <h1>ग्रामपंचायत डिजिटल सेवा</h1>
+            <p>आपले गाव, आपली प्रगती | महाराष्ट्र शासन</p>
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="home.html" class="">मुख्यपृष्ठ</a>
+        <a href="about.html" class="">आमच्याबद्दल</a>
+        <a href="services.html" class="">नागरिक सुविधा</a>
+        <a href="projects.html" class="">विकास कामे</a>
+        <a href="contact.html" class="active">संपर्क व तक्रार</a>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">नवीन टायटल</h2>    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 ग्रामपंचायत कार्यालय. सर्व हक्क राखीव.</p>
+        <p>पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 400000</p>
+        <div class="footer-links">
+            <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+        </div>
+        <p style="font-size: 12px; color: #888;">Developed under CM Samruddha Panchayat Abhiyan</p>
+    </div>
+
+</body>
+</html>
