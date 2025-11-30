@@ -4,93 +4,700 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | ग्रामपंचायत डिजिटल सेवा</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #FF9933; --secondary: #138808; --blue: #000080; --light: #f4f4f4; }
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
-        
          
-        .top-bar { background: var(--blue); color: white; padding: 5px 20px; font-size: 14px; display: flex; justify-content: space-between; }
-        .header { background: white; padding: 15px 20px; display: flex; align-items: center; border-bottom: 4px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .logo { width: 80px; margin-right: 15px; }
-        .title h1 { margin: 0; font-size: 24px; color: #333; }
-        .title p { margin: 0; font-size: 14px; color: #666; }
+        :root {
+            --primary: #FF9933;    
+            --secondary: #138808;  
+            --blue: #000080;       
+            --dark: #333333;
+            --light: #f4f6f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: #444;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
 
          
-        .nav { background: var(--primary); overflow: auto; white-space: nowrap; }
-        .nav a { display: inline-block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; font-weight: bold; }
-        .nav a:hover, .nav a.active { background-color: #cc7a00; }
-        
-         
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; min-height: 500px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        
-         
-        .section-title { color: var(--blue); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; margin-top: 30px; }
-        .content-text { font-size: 18px; line-height: 1.6; color: #444; margin-bottom: 20px; white-space: pre-wrap; }
-        .content-img { text-align: center; margin: 20px 0; }
-        .content-img img { max-width: 100%; border-radius: 8px; border: 3px solid #eee; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .top-bar {
+            background: var(--blue);
+            color: var(--white);
+            padding: 8px 5%;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-main {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            border-bottom: 5px solid var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 90px;
+            margin-right: 20px;
+        }
+
+        .site-title h1 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .site-title p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
 
          
-        .person-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; display: inline-block; width: 200px; margin: 10px; background: #fff; vertical-align: top; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .person-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 2px solid var(--primary); }
-        .person-card h3 { margin: 5px 0; font-size: 18px; color: var(--blue); }
-        .person-card p { color: #666; font-size: 14px; }
-        .btn-call { display: block; background: var(--secondary); color: white; padding: 5px; text-decoration: none; border-radius: 4px; margin-top: 5px; }
+        .nav-wrapper {
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav a {
+            color: var(--white);
+            padding: 15px 25px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .nav a:hover, .nav a.active {
+            background-color: #cc7a00;  
+        }
 
          
-        .download-btn { display: block; background: #dc3545; color: white; padding: 12px; text-align: center; text-decoration: none; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            min-height: 600px;
+        }
+
+         
+        
+         
+        .section-title {
+            color: var(--blue);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+         
+        .content-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: justify;
+            white-space: pre-wrap;  
+        }
+
+         
+        .content-img {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .content-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 4px solid var(--white);
+        }
+
+         
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;  
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+         
+        .person-card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            display: inline-block;
+            width: 220px;
+            margin: 15px;
+            vertical-align: top;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .person-card:hover { transform: translateY(-5px); }
+        .person-card img {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary);
+        }
+        .btn-call {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+         
+        .download-btn {
+            display: block;
+            background: #dc3545;
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background 0.2s;
+        }
         .download-btn:hover { background: #c82333; }
 
-         
-        .footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-        .footer p { margin: 5px 0; font-size: 14px; }
-        .footer-links a { color: #FF9933; margin: 0 10px; text-decoration: none; }
 
          
-        @media (max-width: 600px) {
-            .header { flex-direction: column; text-align: center; }
-            .logo { margin: 0 0 10px 0; }
-            .nav a { padding: 10px 15px; font-size: 14px; }
-            .person-card { width: 100%; display: block; margin: 10px 0; }
+
+         
+        .quick-info-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
+            padding: 25px 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-bottom: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-card i {
+            font-size: 35px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .stat-card h3 {
+            margin: 5px 0;
+            font-size: 26px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+        .stat-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+         
+        .news-section {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+        }
+        .news-header {
+            background: #d32f2f;
+            color: var(--white);
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .news-content {
+            padding: 0;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+        .news-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .news-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: background 0.2s;
+        }
+        .news-item:hover { background-color: #fafafa; }
+        .new-badge {
+            background: var(--secondary);
+            color: var(--white);
+            font-size: 10px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: blink 2s infinite;
+        }
+        .news-link {
+            margin-left: auto;
+            color: var(--blue);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .news-link:hover { text-decoration: underline; }
+        
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+
+         
+
+        .about-section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+         
+        .history-content {
+            overflow: hidden;  
+            font-size: 18px;
+            color: #444;
+            line-height: 1.8;
+        }
+        .history-img {
+            max-width: 45%;
+            border-radius: 8px;
+            border: 4px solid #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+        .float-left { float: left; margin-right: 25px; }
+        .float-right { float: right; margin-left: 25px; }
+
+         
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .structure-card {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .structure-card:hover { transform: translateY(-8px); }
+        
+        .struct-img-container {
+            background: var(--primary);  
+            padding: 25px 0;
+            margin-bottom: 0;
+        }
+        .struct-img-container img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 25px;  
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        .struct-info { padding: 20px; }
+        .designation-badge {
+            background: #6c757d;
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .designation-badge.sarpanch { background: #d32f2f; font-weight: bold; }
+        
+        .struct-info h3 {
+            margin: 5px 0;
+            color: var(--dark);
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .struct-info p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0 15px;
+        }
+        
+        .bio-faq {
+            text-align: left;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+        .bio-faq summary {
+            font-weight: bold;
+            color: var(--blue);
+            outline: none;
+        }
+
+         
+        .office-box {
+            border-left: 5px solid var(--blue);
+            background: #eef2f7;
+        }
+        .office-box p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .office-box i {
+            color: var(--blue);
+            width: 25px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+         
+        .table-responsive { overflow-x: auto; }
+        .roles-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: var(--white);
+        }
+        .roles-table th, .roles-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        .roles-table th {
+            background-color: var(--primary);
+            color: var(--white);
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .roles-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .roles-table tr:hover { background-color: #f1f1f1; }
+
+         
+        .contacts-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            border: 2px solid var(--blue);
+            color: var(--blue);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+        .contact-pill:hover {
+            background: var(--blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        }
+        .contact-pill i { font-size: 20px; }
+
+         
+        .vision-box {
+            border-left: 5px solid var(--secondary);
+            background: #f0fff4;  
+        }
+        .vision-box .section-title { color: var(--secondary); border-color: var(--secondary); }
+        .vision-box .section-title::after { background: var(--secondary); }
+
+
+         
+        .footer {
+            background: var(--dark);
+            color: #bbb;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .footer strong { color: var(--white); }
+        .footer-links { margin: 20px 0; }
+        .footer-links a {
+            color: var(--primary);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .developer-credit {
+            font-size: 12px;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+         
+        @media (max-width: 768px) {
+            .header-main { flex-direction: column; text-align: center; padding: 20px; }
+            .logo { margin: 0 0 15px 0; }
+            .site-title h1 { font-size: 22px; }
+            
+            .nav a { padding: 12px 15px; font-size: 14px; }
+            
+            .history-img { float: none; width: 100%; max-width: 100%; margin: 15px 0; }
+            .quick-info-container { grid-template-columns: 1fr 1fr; }
+            
+            .contact-pill { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
+    
     <div class="top-bar">
-        <span><i class="fas fa-phone"></i> आपत्कालीन संपर्क: 112</span>
-        <span><i class="fas fa-language"></i> मराठी / English</span>
+        <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
+        <div>
+            <span style="margin-right:15px;"><i class="fas fa-envelope"></i> grampanchayat@gmail.com</span>
+            <span><i class="fas fa-language"></i> मराठी</span>
+        </div>
     </div>
 
-    <div class="header">
+    
+    <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
-        <div class="title">
+        <div class="site-title">
             <h1>ग्रामपंचायत डिजिटल सेवा</h1>
-            <p>आपले गाव, आपली प्रगती | महाराष्ट्र शासन</p>
+            <p>मुख्यमंत्री समृद्ध पंचायतराज अभियान अंतर्गत विकसित | महाराष्ट्र शासन</p>
         </div>
+    </header>
+
+    
+    <div class="nav-wrapper">
+        <nav class="nav">
+            <a href="home.html" class="">मुख्यपृष्ठ</a>
+            <a href="about.html" class="active">आमच्याबद्दल</a>
+            <a href="services.html" class="">नागरिक सुविधा</a>
+            <a href="projects.html" class="">विकास कामे</a>
+            <a href="contact.html" class="">संपर्क व तक्रार</a>
+        </nav>
     </div>
 
-    <div class="nav">
-        <a href="home.html" class="">मुख्यपृष्ठ</a>
-        <a href="about.html" class="active">आमच्याबद्दल</a>
-        <a href="services.html" class="">नागरिक सुविधा</a>
-        <a href="projects.html" class="">विकास कामे</a>
-        <a href="contact.html" class="">संपर्क व तक्रार</a>
-    </div>
+    
+    <main class="container">
+        
+        
+        <div class="about-section history-box">
+            <h2 class="section-title">आमच्या गावाचा इतिहास</h2>
+            <div class="history-content">महाराष्ट्र राज्याच्या कोल्हापूर जिल्ह्यातील कागल तालुक्यातील महाराष्ट्र व  कर्नाटक राज्याच्या सीमे लगत वेदगंगा नदी काठी वसलेले आमचे गाव म्हणजे भडगाव.भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून ९  सदस्य संख्या आहे.<img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp7165327.jpg" class="history-img float-left">
 
-    <div class="container">
-        <h2 class="section-title">नवीन टायटल</h2><div class="content-text">येथे माहिती लिहा...</div>    </div>
+ग्रामपंचायतीस तंटामुक्त गाव पुरस्कार तालूकास्तरीय बालस्नेही व लिंग भाव अनकूल पंचायत पथदर्शी प्रकल्प कागल अंतर्गात्त सन २०२२.२३ उत्कृष्ट बालस्नेही ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक व उत्कृष्ट महिला सभा ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक तसेच T B मुक्त ग्रामपंचायत २०२३ कोल्हापूर ग्रामीण यासारखे विविध पुरस्कार मिळालेले आहेत. <img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp9198095.jpg" class="history-img float-right"></div>
+        </div>
+        <div class="about-section">
+            <h2 class="section-title">पंचायत संरचना</h2>
+            <div class="structure-grid">
+                <div class="structure-card">
+                    <div class="struct-img-container">
+                        <img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp2923674.jpg" alt="श्री.बाळासो मारुती पाटील">
+                    </div>
+                    <div class="struct-info">
+                        <span class="designation-badge sarpanch">सरपंच</span>
+                        <h3>श्री.बाळासो मारुती पाटील</h3>
+                        <p><i class="fas fa-phone-alt"></i> 88888888</p>
+                        <details class="bio-faq"><summary>जीवनप्रवास जाणून घ्या</summary><p>भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून ९  सदस्य संख्या आहे.
 
-    <div class="footer">
-        <p>&copy; 2025 ग्रामपंचायत कार्यालय. सर्व हक्क राखीव.</p>
-        <p>पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 400000</p>
+ग्रामपंचायतीस तंटामुक्त गाव पुरस्कार तालूकास्तरीय बालस्नेही व लिंग भाव अनकूल पंचायत पथदर्शी प्रकल्प कागल अंतर्गात्त सन २०२२.२३ उत्कृष्ट बालस्नेही ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक व उत्कृष्ट महिला सभा ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक तसेच T B मुक्त ग्रामपंचायत २०२३ कोल्हापूर ग्रामीण यासारखे विविध पुरस्कार मिळालेले आहेत.</p></details>
+                    </div>
+                </div>
+                <div class="structure-card">
+                    <div class="struct-img-container">
+                        <img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp9982669.jpg" alt="सौ.प्रतिभा राजेंद्र म्हांगोरे">
+                    </div>
+                    <div class="struct-info">
+                        <span class="designation-badge ">उपसरपंच</span>
+                        <h3>सौ.प्रतिभा राजेंद्र म्हांगोरे</h3>
+                        <p><i class="fas fa-phone-alt"></i> 77777777</p>
+                        <details class="bio-faq"><summary>जीवनप्रवास जाणून घ्या</summary><p>भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून ९  सदस्य संख्या आहे.
+
+ग्रामपंचायतीस तंटामुक्त गाव पुरस्कार तालूकास्तरीय बालस्नेही व लिंग भाव अनकूल पंचायत पथदर्शी प्रकल्प कागल अंतर्गात्त सन २०२२.२३ उत्कृष्ट बालस्नेही ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक व उत्कृष्ट महिला सभा ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक तसेच T B मुक्त ग्रामपंचायत २०२३ कोल्हापूर ग्रामीण यासारखे विविध पुरस्कार मिळालेले आहेत.</p></details>
+                    </div>
+                </div>
+                <div class="structure-card">
+                    <div class="struct-img-container">
+                        <img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp5098017.jpg" alt="श्री.रणजित महादेव विभूते">
+                    </div>
+                    <div class="struct-info">
+                        <span class="designation-badge ">ग्रामसेवक</span>
+                        <h3>श्री.रणजित महादेव विभूते</h3>
+                        <p><i class="fas fa-phone-alt"></i> 88888888</p>
+                        <details class="bio-faq"><summary>जीवनप्रवास जाणून घ्या</summary><p>भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून ९  सदस्य संख्या आहे.
+
+ग्रामपंचायतीस तंटामुक्त गाव पुरस्कार तालूकास्तरीय बालस्नेही व लिंग भाव अनकूल पंचायत पथदर्शी प्रकल्प कागल अंतर्गात्त सन २०२२.२३ उत्कृष्ट बालस्नेही ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक व उत्कृष्ट महिला सभा ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक तसेच T B मुक्त ग्रामपंचायत २०२३ कोल्हापूर ग्रामीण यासारखे विविध पुरस्कार मिळालेले आहेत.</p></details>
+                    </div>
+                </div>
+                <div class="structure-card">
+                    <div class="struct-img-container">
+                        <img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp1746672.jpg" alt="सौ.राणी विश्वनाथ चौगले">
+                    </div>
+                    <div class="struct-info">
+                        <span class="designation-badge ">सदस्य</span>
+                        <h3>सौ.राणी विश्वनाथ चौगले</h3>
+                        <p><i class="fas fa-phone-alt"></i> 88888888</p>
+                        <details class="bio-faq"><summary>जीवनप्रवास जाणून घ्या</summary><p>भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून ९  सदस्य संख्या आहे.
+
+ग्रामपंचायतीस तंटामुक्त गाव पुरस्कार तालूकास्तरीय बालस्नेही व लिंग भाव अनकूल पंचायत पथदर्शी प्रकल्प कागल अंतर्गात्त सन २०२२.२३ उत्कृष्ट बालस्नेही ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक व उत्कृष्ट महिला सभा ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक तसेच T B मुक्त ग्रामपंचायत २०२३ कोल्हापूर ग्रामीण यासारखे विविध पुरस्कार मिळालेले आहेत.</p></details>
+                    </div>
+                </div></div>
+        </div>
+        <div class="about-section office-box">
+            <h2 class="section-title">पंचायत कार्यालय</h2>
+            <p><strong><i class="fas fa-map-marker-alt"></i> पत्ता:</strong> ग्रामपंचायत भडगाव ता कागल
+पत्ता : मु. भडगाव पोष्ट मळगे बु
+
+तालुका – कागल, जिल्हा – कोल्हापूर.
+महाराष्ट्र. ४१६२१९.
+फोन नंबर : ९९२२६८६२९५, ९६८९९४२९२९,</p>
+            <p><strong><i class="far fa-clock"></i> कामाची वेळ:</strong> सकाळी 10:00 ते सायं 5:30</p>
+        </div>
+        <div class="about-section">
+            <h2 class="section-title">भूमिका व जबाबदाऱ्या</h2>
+            <div class="table-responsive">
+                <table class="roles-table">
+                    <thead><tr><th>क्र.</th><th>पदनाम / समिती</th><th>भूमिका व जबाबदारी</th></tr></thead>
+                    <tbody><tr><td>1</td><td><strong>सरपंच</strong></td><td>गावातील लोकांमध्ये बंधू भाव निर्माण करुन गावाचा विकास करणे.
+गावातील तंटे निर्विवाद मिटवणे.
+गावाची स्वच्छता राखणे.
+वेळोवेळी ग्रामसभा घेणे. (एका वर्षातून किमान 4 ग्रामसभा घेणे हे ग्रामपंचायत अधिनियम कायदयाअंतर्गत बंधनकारक आहे)
+गावात आवास करत असल्या बाबतचा दाखला देणे (रहिवासी दाखला) इ.
+गावचा सर्वांगीण विकास करणे.
+गावातील लोकाना मुलभूत सेवा पुरवणे.</td></tr><tr><td>2</td><td><strong>उपसरपंच</strong></td><td>गावातील लोकांमध्ये बंधू भाव निर्माण करुन गावाचा विकास करणे.
+गावातील तंटे निर्विवाद मिटवणे.
+गावाची स्वच्छता राखणे.
+वेळोवेळी ग्रामसभा घेणे. (एका वर्षातून किमान 4 ग्रामसभा घेणे हे ग्रामपंचायत अधिनियम कायदयाअंतर्गत बंधनकारक आहे)
+गावात आवास करत असल्या बाबतचा दाखला देणे (रहिवासी दाखला) इ.
+गावचा सर्वांगीण विकास करणे.
+गावातील लोकाना मुलभूत सेवा पुरवणे.</td></tr><tr><td>3</td><td><strong>ग्रामसेवक</strong></td><td>गावात आलेल्या शासकीय अधिका-याचे आदरातिथ्य करणे.
+गावामध्ये सुव्यवस्था ठेवण्यासाठी कार्यक्षम असणे.
+गावकरी मंडळींना नव-नविन सरकारी योजनांबद्दल मार्गदर्शन करणे. इ.</td></tr><tr><td>4</td><td><strong>सदस्य</strong></td><td>सदस्यांनी आप-आपल्या वार्डाकडे नियमित लक्ष दयावे.
+वार्डातील समस्या आपल्या पध्दतीने सोडवाव्यात.
+गावातील लोकांमध्ये बंधू भाव निर्माण करुन गावाचा विकास करणे.
+वार्डाची स्वच्छता राखणे. इ.</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="about-section">
+            <h2 class="section-title">महत्त्वाचे व आपत्कालीन संपर्क</h2>
+            <div class="contacts-wrapper"><a href="tel:108" class="contact-pill"><i class="fas fa-hospital"></i> आरोग्य केंद्र: <strong>108</strong></a><a href="tel:100" class="contact-pill"><i class="fas fa-shield-alt"></i> पोलीस: <strong>100</strong></a><a href="tel:108" class="contact-pill"><i class="fas fa-hospital"></i> रुग्णवाहिका: <strong>108</strong></a><a href="tel:112" class="contact-pill"><i class="fas fa-fire-extinguisher"></i> अग्निशमन: <strong>112</strong></a></div>
+        </div>
+        <div class="about-section vision-box">
+            <h2 class="section-title">दृष्टीकोन, ध्येय आणि मूलभूत मूल्ये</h2>
+            <div class="content-text">गावामध्ये रस्ते बांधणे.
+गावातील रस्त्यांची दुरुस्ती करणे.
+दिवाबत्तीची सोय करणे.
+जन्म,मृत्यू व विवाहाची नोंद ठेवणे.
+सार्वजनिक स्वच्छता ठेवणे.
+सांडपाण्याची व्यवस्था करणे.
+पिण्याच्या पाण्याचा पुरवठा करणे.
+शिक्षण तसेच आरोग्यविषयक सोयी पुरवणे.
+रोजगार, शेती विकासाच्या व पशुधन सुधारणेच्या योजना अंमलात आणणे.
+गावाचा बाजार, जत्रा, उत्सव यांची व्यवस्था ठेवणे.</div>
+        </div>    </main>
+
+    
+    <footer class="footer">
+        <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
+        <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
+        
         <div class="footer-links">
-            <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+            <a href="home.html">मुख्यपृष्ठ</a> |
+            <a href="about.html">आमच्याबद्दल</a> |
+            <a href="services.html">योजना</a> |
+            <a href="contact.html">संपर्क</a>
         </div>
-        <p style="font-size: 12px; color: #888;">Developed under CM Samruddha Panchayat Abhiyan</p>
-    </div>
+
+        <div class="developer-credit">
+            Developed under <strong>CM Samruddha Panchayat Abhiyan</strong><br>
+            Technology Partner: Google Sheets CMS
+        </div>
+    </footer>
 
 </body>
 </html>
