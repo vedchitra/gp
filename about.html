@@ -383,6 +383,23 @@
         .video-card h4 { text-align: center; margin: 10px 0 0; font-size: 16px; padding: 0 10px; }
 
          
+        .calendar-table th { background: #000080; color: white; }
+        .calendar-table tr:nth-child(even) { background: #f0f8ff; }
+        .calendar-table td i { margin-right: 8px; color: var(--primary); }
+
+         
+        .budget-chart-container {
+            display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 20px 0; gap: 30px;
+        }
+        .pie-chart {
+            width: 250px; height: 250px; border-radius: 50%;
+            border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .chart-legend { list-style: none; padding: 0; }
+        .chart-legend li { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; }
+        .chart-legend span { display: block; width: 15px; height: 15px; margin-right: 12px; border-radius: 3px; }
+
+         
         .footer {
             background: var(--dark); color: #bbb; text-align: center;
             padding: 40px 20px; margin-top: 50px; font-size: 14px;
@@ -398,12 +415,8 @@
             .logo { margin: 0 0 15px 0; }
             .nav a { padding: 12px 15px; font-size: 14px; }
             .history-img, .float-left, .float-right { float: none; width: 100%; margin: 15px 0; }
-            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid { grid-template-columns: 1fr 1fr; }
+            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid, .budget-chart-container { grid-template-columns: 1fr; flex-direction: column; }
             .ba-container { height: 250px; }
-        }
-        
-        @media (max-width: 480px) {
-            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -431,8 +444,10 @@
             <a href="about.html" class="active">आमच्याबद्दल</a>
             <a href="services.html" class="">नागरिक सुविधा</a>
             <a href="projects.html" class="">विकास कामे</a>
-            <a href="schemes.html" class="">योजना आणि लाभार्थी</a>
-            <a href="contact.html" class="">संपर्क व तक्रार</a>
+            <a href="schemes.html" class="">योजना</a>
+            <a href="announcements.html" class="">घोषणा</a>
+            <a href="budget.html" class="">अर्थसंकल्प</a>
+            <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
 
@@ -441,7 +456,7 @@
         
         <div class="about-section history-box">
             <h2 class="section-title">आमच्या गावाचा इतिहास</h2>
-            <div class="history-content">महाराष्ट्र राज्याच्या कोल्हापूर जिल्ह्यातील कागल तालुक्यातील महाराष्ट्र व  कर्नाटक राज्याच्या सीमे लगत वेदगंगा नदी काठी वसलेले आमचे गाव म्हणजे भडगाव.भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून ९  सदस्य संख्या आहे.<img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp7165327.jpg" class="history-img float-left">
+            <div class="history-content">महाराष्ट्र राज्याच्या कोल्हापूर जिल्ह्यातील कागल तालुक्यातील महाराष्ट्र व  कर्नाटक राज्याच्या सीमे लगत वेदगंगा नदी काठी वसलेले आमचे गाव म्हणजे भडगाव.भडगाव ग्रामपंचायत ही सन २१/०३/१९५६  सालापासून कार्यरत असून 9  सदस्य संख्या आहे.<img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp7165327.jpg" class="history-img float-left">
 
 ग्रामपंचायतीस तंटामुक्त गाव पुरस्कार तालूकास्तरीय बालस्नेही व लिंग भाव अनकूल पंचायत पथदर्शी प्रकल्प कागल अंतर्गात्त सन २०२२.२३ उत्कृष्ट बालस्नेही ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक व उत्कृष्ट महिला सभा ग्रामपंचायत पुरस्कार तालुका स्तरीय तृतीय क्रमांक तसेच T B मुक्त ग्रामपंचायत २०२३ कोल्हापूर ग्रामीण यासारखे विविध पुरस्कार मिळालेले आहेत. <img src="https://raw.githubusercontent.com/vedchitra/city/main/assets/gp9198095.jpg" class="history-img float-right"></div>
         </div>
