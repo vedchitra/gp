@@ -36,6 +36,7 @@
         .text-orange { color: #d35400 !important; border-bottom-color: #d35400 !important; }
         .text-green { color: #218838 !important; border-bottom-color: #218838 !important; }
         .text-red { color: #c82333 !important; border-bottom-color: #c82333 !important; }
+        .text-center { text-align: center; }
 
          
         .top-bar {
@@ -400,6 +401,48 @@
         .chart-legend span { display: block; width: 15px; height: 15px; margin-right: 12px; border-radius: 3px; }
 
          
+        
+         
+        .contact-info-box .contact-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px;
+        }
+        .contact-item {
+            display: flex; align-items: flex-start; gap: 20px; padding: 20px;
+            background: #ffffff; border-radius: 15px; border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .contact-item:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        
+        .icon-circle {
+            width: 50px; height: 50px; background: var(--light); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
+        }
+        .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; }
+        .contact-item a { color: var(--blue); font-weight: 600; text-decoration: none; }
+        .contact-item a:hover { text-decoration: underline; }
+
+         
+        .map-responsive { overflow: hidden; padding-bottom: 50%; position: relative; height: 0; border-radius: 15px; border: 1px solid #ddd; }
+        .map-responsive iframe { left: 0; top: 0; height: 100%; width: 100%; position: absolute; }
+
+         
+        .feedback-btn {
+            display: inline-block; background: var(--secondary); color: white; padding: 15px 35px;
+            border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(19, 136, 8, 0.3); transition: transform 0.3s;
+        }
+        .feedback-btn:hover { transform: translateY(-3px); background: #0f6e06; color: white; }
+
+         
+        .whatsapp-section { background: linear-gradient(135deg, #dcf8c6 0%, #ffffff 100%); border: 1px solid #25D366; }
+        .whatsapp-btn {
+            display: inline-block; background: #25D366; color: white; padding: 12px 30px;
+            border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
+            margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-btn:hover { background: #128C7E; color: white; }
+
+         
         .footer {
             background: var(--dark); color: #bbb; text-align: center;
             padding: 40px 20px; margin-top: 50px; font-size: 14px;
@@ -415,7 +458,7 @@
             .logo { margin: 0 0 15px 0; }
             .nav a { padding: 12px 15px; font-size: 14px; }
             .history-img, .float-left, .float-right { float: none; width: 100%; margin: 15px 0; }
-            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid, .budget-chart-container { grid-template-columns: 1fr; flex-direction: column; }
+            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid, .budget-chart-container, .contact-info-box .contact-grid { grid-template-columns: 1fr; }
             .ba-container { height: 250px; }
         }
     </style>
@@ -442,7 +485,7 @@
         <nav class="nav">
             <a href="home.html" class="active">मुख्यपृष्ठ</a>
             <a href="about.html" class="">आमच्याबद्दल</a>
-            <a href="services.html" class="">नागरिक सुविधा</a>
+            <a href="services.html" class="">सुविधा</a>
             <a href="projects.html" class="">विकास कामे</a>
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="">घोषणा</a>
@@ -474,7 +517,7 @@ Maruti Suzuki has a total of 23 car models available in India right now, includi
             <div class="stat-card"><i class="fas fa-users"></i><h3>1550</h3><p>लोकसंख्या</p></div>
             <div class="stat-card"><i class="fas fa-home"></i><h3>435</h3><p>एकूण घरे</p></div>
             <div class="stat-card"><i class="fas fa-graduation-cap"></i><h3>76.4</h3><p>साक्षरता दर (%)</p></div>
-            <div class="stat-card"><i class="fas fa-map-signs"></i><h3>7</h3><p>प्रभाग संख्या</p></div>
+            <div class="stat-card"><i class="fas fa-map-signs"></i><h3>9</h3><p>प्रभाग संख्या</p></div>
             <div class="stat-card"><i class="fas fa-chart-area"></i><h3>136</h3><p>क्षेत्रफळ (Ha)</p></div>
             <div class="stat-card"><i class="fas fa-hand-holding-water"></i><h3>3</h3><p>पाण्याचे स्रोत</p></div>
         </div>
