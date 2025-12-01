@@ -383,6 +383,23 @@
         .video-card h4 { text-align: center; margin: 10px 0 0; font-size: 16px; padding: 0 10px; }
 
          
+        .calendar-table th { background: #000080; color: white; }
+        .calendar-table tr:nth-child(even) { background: #f0f8ff; }
+        .calendar-table td i { margin-right: 8px; color: var(--primary); }
+
+         
+        .budget-chart-container {
+            display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 20px 0; gap: 30px;
+        }
+        .pie-chart {
+            width: 250px; height: 250px; border-radius: 50%;
+            border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .chart-legend { list-style: none; padding: 0; }
+        .chart-legend li { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; }
+        .chart-legend span { display: block; width: 15px; height: 15px; margin-right: 12px; border-radius: 3px; }
+
+         
         .footer {
             background: var(--dark); color: #bbb; text-align: center;
             padding: 40px 20px; margin-top: 50px; font-size: 14px;
@@ -398,12 +415,8 @@
             .logo { margin: 0 0 15px 0; }
             .nav a { padding: 12px 15px; font-size: 14px; }
             .history-img, .float-left, .float-right { float: none; width: 100%; margin: 15px 0; }
-            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid { grid-template-columns: 1fr 1fr; }
+            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid, .budget-chart-container { grid-template-columns: 1fr; flex-direction: column; }
             .ba-container { height: 250px; }
-        }
-        
-        @media (max-width: 480px) {
-            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -431,8 +444,10 @@
             <a href="about.html" class="">आमच्याबद्दल</a>
             <a href="services.html" class="">नागरिक सुविधा</a>
             <a href="projects.html" class="active">विकास कामे</a>
-            <a href="schemes.html" class="">योजना आणि लाभार्थी</a>
-            <a href="contact.html" class="">संपर्क व तक्रार</a>
+            <a href="schemes.html" class="">योजना</a>
+            <a href="announcements.html" class="">घोषणा</a>
+            <a href="budget.html" class="">अर्थसंकल्प</a>
+            <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
 
@@ -519,7 +534,7 @@
                         <input type="range" min="0" max="100" value="50" class="ba-slider" oninput="moveSlider(this)">
                         <div class="ba-handle"></div>
                     </div>
-                    <div class="ba-caption">शाळा इमारत</div>
+                    <div class="ba-caption">इमारत</div>
                 </div></div>
                     
                     <div class="ba-controls">
@@ -532,8 +547,8 @@
             <h2 class="section-title">इम्पॅक्ट डॅशबोर्ड (Impact Dashboard)</h2>
             <div class="impact-grid">
                 <div class="impact-card">
-                    <div class="progress-circle" style="--p:100">
-                        <span>100%</span>
+                    <div class="progress-circle" style="--p:77">
+                        <span>77%</span>
                     </div>
                     <h4>स्वच्छतागृहे</h4>
                 </div>
@@ -558,10 +573,6 @@
                         <tbody><tr>
                     <td>1</td>
                     <td><strong>बाग </strong><br><small> हे स्लायडरद्वारे दाखवण्यासाठी  इमेजचे  स्लाईड सुविधा उपलब्ध करून द्यावी. पूर्ण झालेल्या कामानंतर ही स्लाईडशो दिसला पाहिजे. म्हणजे गावचा जुना रस्ता व नवीन केलेला रस्ता, जुनी शाळा व नवी शाळा असे 4 स्लाईड असावेत.</small></td>
-                    <td><span class="status-tag">प्रस्तावित</span></td>
-                </tr><tr>
-                    <td>2</td>
-                    <td><strong>Stand</strong><br><small></small></td>
                     <td><span class="status-tag">प्रस्तावित</span></td>
                 </tr></tbody>
                     </table>
