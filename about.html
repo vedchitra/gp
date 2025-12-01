@@ -346,6 +346,43 @@
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
 
          
+        
+         
+        .schemes-links-container {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;
+        }
+        .scheme-link-card {
+            display: block; padding: 40px 20px; text-align: center; border-radius: 15px;
+            color: white; text-decoration: none; transition: transform 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .scheme-link-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .scheme-link-card.state { background: linear-gradient(135deg, #ff9966, #ff5e62); }
+        .scheme-link-card.central { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+        .scheme-link-card i { font-size: 50px; margin-bottom: 15px; opacity: 0.9; }
+        .scheme-link-card h3 { margin: 10px 0; font-size: 24px; font-weight: 700; }
+        .scheme-link-card p { font-size: 16px; margin: 0; opacity: 0.9; }
+
+         
+        .scheme-table th { background: #000080 !important; color: white; }
+        .btn-small { 
+            background: var(--secondary); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
+            text-decoration: none; display: inline-block;
+        }
+        .scheme-details summary { cursor: pointer; color: var(--blue); font-weight: bold; }
+        .scheme-details p { 
+            margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; 
+        }
+
+         
+        .video-section-bg { background: #222; color: white; border-radius: 15px; padding: 30px; margin-top: 40px; }
+        .video-section-bg .section-title { color: white; border-bottom-color: #555; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .video-card { background: #333; border-radius: 10px; overflow: hidden; padding-bottom: 10px; }
+        .video-frame { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .video-card h4 { text-align: center; margin: 10px 0 0; font-size: 16px; padding: 0 10px; }
+
+         
         .footer {
             background: var(--dark); color: #bbb; text-align: center;
             padding: 40px 20px; margin-top: 50px; font-size: 14px;
@@ -361,8 +398,12 @@
             .logo { margin: 0 0 15px 0; }
             .nav a { padding: 12px 15px; font-size: 14px; }
             .history-img, .float-left, .float-right { float: none; width: 100%; margin: 15px 0; }
-            .quick-info-container, .impact-grid { grid-template-columns: 1fr 1fr; }
+            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid { grid-template-columns: 1fr 1fr; }
             .ba-container { height: 250px; }
+        }
+        
+        @media (max-width: 480px) {
+            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -390,6 +431,7 @@
             <a href="about.html" class="active">आमच्याबद्दल</a>
             <a href="services.html" class="">नागरिक सुविधा</a>
             <a href="projects.html" class="">विकास कामे</a>
+            <a href="schemes.html" class="">योजना आणि लाभार्थी</a>
             <a href="contact.html" class="">संपर्क व तक्रार</a>
         </nav>
     </div>
@@ -465,7 +507,6 @@
 पत्ता : मु. भडगाव पोष्ट मळगे 
 
 तालुका – कागल, जिल्हा – कोल्हापूर.
-महाराष्ट्र. .
 फोन नंबर : ९९२२६८६२९५, ९६८९९४२९२९,</p>
             <p><strong><i class="far fa-clock"></i> कामाची वेळ:</strong> सकाळी 10:00 ते सायं 5:30</p>
         </div>
@@ -518,7 +559,7 @@
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
         <div class="footer-links">
-            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="projects.html">Projects</a> | <a href="contact.html">Contact</a>
+            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="projects.html">Projects</a> | <a href="schemes.html">Schemes</a> | <a href="contact.html">Contact</a>
         </div>
         <div class="developer-credit">
             Developed under <strong>CM Samruddha Panchayat Abhiyan</strong><br>
