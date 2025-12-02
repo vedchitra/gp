@@ -304,14 +304,12 @@
         .ba-carousel-wrapper { position: relative; max-width: 800px; margin: 0 auto; padding-bottom: 20px; }
         .ba-slide { display: none; width: 100%; }
         .ba-slide.active { display: block; animation: fade 0.8s; }
-        
         .ba-container {
             position: relative; width: 100%; height: 400px; overflow: hidden;
             border-radius: 10px; border: 4px solid #fff; margin: 0 auto;
         }
         .ba-img-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
         .ba-img-container img { width: 100%; height: 100%; object-fit: cover; }
-        
         .ba-img-container.before { width: 50%; border-right: 3px solid #fff; z-index: 2; }
         .ba-label {
             position: absolute; top: 15px; padding: 5px 12px; background: rgba(0,0,0,0.6);
@@ -319,7 +317,6 @@
         }
         .before .ba-label { left: 15px; }
         .after .ba-label { right: 15px; }
-
         .ba-slider {
             position: absolute; top: 50%; left: 0; width: 100%; height: 100%; opacity: 0;
             cursor: ew-resize; z-index: 10; transform: translateY(-50%); margin: 0;
@@ -334,9 +331,7 @@
             background: #fff; color: #222; width: 30px; height: 30px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center; font-size: 14px;
         }
-        
         .ba-caption { margin-top: 15px; font-size: 18px; font-style: italic; color: #ccc; }
-        
         .ba-controls { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
         .ba-controls button {
             background: transparent; border: 1px solid #fff; color: #fff; width: 40px; height: 40px;
@@ -346,8 +341,6 @@
 
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
 
-         
-        
          
         .schemes-links-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;
@@ -363,18 +356,14 @@
         .scheme-link-card h3 { margin: 10px 0; font-size: 24px; font-weight: 700; }
         .scheme-link-card p { font-size: 16px; margin: 0; opacity: 0.9; }
 
-         
         .scheme-table th { background: #000080 !important; color: white; }
         .btn-small { 
             background: var(--secondary); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
             text-decoration: none; display: inline-block;
         }
         .scheme-details summary { cursor: pointer; color: var(--blue); font-weight: bold; }
-        .scheme-details p { 
-            margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; 
-        }
+        .scheme-details p { margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; }
 
-         
         .video-section-bg { background: #222; color: white; border-radius: 15px; padding: 30px; margin-top: 40px; }
         .video-section-bg .section-title { color: white; border-bottom-color: #555; }
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -409,23 +398,19 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s;
         }
         .contact-item:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        
         .icon-circle {
             width: 50px; height: 50px; background: var(--light); border-radius: 50%;
             display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
         }
         .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; white-space: pre-wrap; }
-        
         .map-responsive { overflow: hidden; padding-bottom: 50%; position: relative; height: 0; border-radius: 15px; border: 1px solid #ddd; }
         .map-responsive iframe { left: 0; top: 0; height: 100%; width: 100%; position: absolute; }
-
         .feedback-btn {
             display: inline-block; background: var(--secondary); color: white; padding: 15px 35px;
             border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
             box-shadow: 0 4px 15px rgba(19, 136, 8, 0.3); transition: transform 0.3s;
         }
         .feedback-btn:hover { transform: translateY(-3px); background: #0f6e06; color: white; }
-
         .whatsapp-section { background: linear-gradient(135deg, #dcf8c6 0%, #ffffff 100%); border: 1px solid #25D366; }
         .whatsapp-btn {
             display: inline-block; background: #25D366; color: white; padding: 12px 30px;
@@ -436,10 +421,9 @@
 
          
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px;
         }
-         
-        .gallery-item { display: none; }
+        .gallery-item { display: none;   }
         .gallery-item img {
             width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
             border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -470,20 +454,13 @@
             .logo { margin: 0 0 15px 0; }
             .nav a { padding: 12px 15px; font-size: 14px; }
             .history-img, .float-left, .float-right { float: none; width: 100%; margin: 15px 0; }
-            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid, .budget-chart-container, .contact-info-box .contact-grid { grid-template-columns: 1fr; }
+            .quick-info-container, .impact-grid, .schemes-links-container, .video-grid, .budget-chart-container, .contact-info-box .contact-grid, .gallery-grid { grid-template-columns: 1fr; }
             .ba-container { height: 250px; }
         }
     </style>
 </head>
 <body>
 
-    
-    <div class="top-bar">
-        <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
-        <div><i class="fas fa-language"></i> मराठी</div>
-    </div>
-
-    
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -492,7 +469,6 @@
         </div>
     </header>
 
-    
     <div class="nav-wrapper">
         <nav class="nav">
             <a href="home.html" class="">मुख्यपृष्ठ</a>
@@ -507,39 +483,32 @@
         </nav>
     </div>
 
-    
     <main class="container">
-        <div class="about-section gallery-box">
+        <script>
+            window.galleryData = {
+                photos: ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp3566355.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp9169679.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp8721022.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4720919.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp9354516.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4358376.jpg"],
+                videos: []
+            };
+        </script><div class="about-section gallery-box">
             <h2 class="section-title">📸 फोटो गॅलरी</h2>
-            <div id="photo-gallery-container" class="gallery-grid">
-                
-            </div>
+            <div id="photo-gallery-container" class="gallery-grid"></div>
             <div class="pagination-controls" id="photo-pagination"></div>
         </div><div class="about-section gallery-box">
             <h2 class="section-title">🎥 व्हिडिओ गॅलरी</h2>
-            <div id="video-gallery-container" class="video-grid">
-                
-            </div>
+            <div id="video-gallery-container" class="video-grid"></div>
             <div class="pagination-controls" id="video-pagination"></div>
-        </div><script>
-            var galleryPhotos = ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp9169679.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp8721022.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4720919.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp9354516.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4358376.jpg"];
-            var galleryVideos = [];
-        </script>    </main>
+        </div>    </main>
 
-    
     <footer class="footer">
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
-        <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
         <div class="footer-links">
-            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="projects.html">Projects</a> | <a href="schemes.html">Schemes</a> | <a href="contact.html">Contact</a>
+            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a>
         </div>
         <div class="developer-credit">
-            Developed under <strong>CM Samruddha Panchayat Abhiyan</strong><br>
             Powered by Google Sheets CMS
         </div>
     </footer>
 
-    
     <script>
         
         function moveSlider(input) {
@@ -547,33 +516,23 @@
             const beforeImg = slide.querySelector('.before');
             const handle = slide.querySelector('.ba-handle');
             const val = input.value;
-            
             beforeImg.style.width = val + "%";
             handle.style.left = val + "%";
         }
 
-        
         let slideIndex = 0;
         const slides = document.querySelectorAll('.ba-slide');
-        
         function showSlide(n) {
             if(slides.length === 0) return;
             slides.forEach(s => s.classList.remove('active'));
-            
             slideIndex = (n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
-        
         function nextSlide() { showSlide(slideIndex + 1); }
         function prevSlide() { showSlide(slideIndex - 1); }
-
-        
         if(slides.length > 0) {
             slides[0].classList.add('active');
-            
-            if(slides.length > 1) {
-                setInterval(nextSlide, 5000); 
-            }
+            if(slides.length > 1) setInterval(nextSlide, 5000);
         }
 
         
@@ -582,7 +541,6 @@
         function setupPagination(containerId, btnContainerId, itemsArray, type) {
             const container = document.getElementById(containerId);
             const btnContainer = document.getElementById(btnContainerId);
-            
             
             if(!container || !itemsArray || itemsArray.length === 0) return;
 
@@ -598,7 +556,7 @@
                 pageItems.forEach(item => {
                     let html = "";
                     if(type === 'photo') {
-                        html = `<div class="gallery-item" style="display:block;"><img src="${item}" alt="Gallery Photo" onclick="window.open(this.src, '_blank')"></div>`;
+                        html = `<div class="gallery-item" style="display:block;"><img src="${item}" alt="Photo" onclick="window.open(this.src, '_blank')"></div>`;
                     } else {
                         let videoId = "";
                         if(item.url.includes("v=")) videoId = item.url.split('v=')[1].split('&')[0];
@@ -633,18 +591,14 @@
                     btnContainer.appendChild(nextBtn);
                 }
             }
-
-            
             renderPage(1);
         }
 
         
         window.addEventListener('DOMContentLoaded', function() {
-            if(typeof galleryPhotos !== 'undefined') {
-                setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
-            }
-            if(typeof galleryVideos !== 'undefined') {
-                setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
+            if(window.galleryConfig) {
+                setupPagination('photo-gallery-container', 'photo-pagination', window.galleryConfig.photos, 'photo');
+                setupPagination('video-gallery-container', 'video-pagination', window.galleryConfig.videos, 'video');
             }
         });
     </script>
