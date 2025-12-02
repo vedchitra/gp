@@ -436,10 +436,9 @@
 
          
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;
         }
-         
-        .gallery-item { display: none; }
+        .gallery-item { display: none;   }
         .gallery-item img {
             width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
             border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -478,12 +477,6 @@
 <body>
 
     
-    <div class="top-bar">
-        <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
-        <div><i class="fas fa-language"></i> मराठी</div>
-    </div>
-
-    
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -502,29 +495,33 @@
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="">घोषणा</a>
             <a href="budget.html" class="">अर्थसंकल्प</a>
-            <a href="gallery.html" class="active">गॅलरी</a>
+            <a href="gallery.html" class="active">गॅलरी</a> 
             <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
 
     
     <main class="container">
+        <script>
+            window.gpGalleryData = {
+                photos: ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4347852.png","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp2444862.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg"],
+                videos: []
+            };
+        </script>
         <div class="about-section gallery-box">
             <h2 class="section-title">📸 फोटो गॅलरी</h2>
             <div id="photo-gallery-container" class="gallery-grid">
                 
             </div>
             <div class="pagination-controls" id="photo-pagination"></div>
-        </div><div class="about-section gallery-box">
+        </div>
+        <div class="about-section gallery-box">
             <h2 class="section-title">🎥 व्हिडिओ गॅलरी</h2>
             <div id="video-gallery-container" class="video-grid">
                 
             </div>
             <div class="pagination-controls" id="video-pagination"></div>
-        </div><script>
-            var galleryPhotos = ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp2444862.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg"];
-            var galleryVideos = [];
-        </script>    </main>
+        </div>    </main>
 
     
     <footer class="footer">
@@ -640,10 +637,14 @@
 
         
         window.addEventListener('DOMContentLoaded', function() {
-            if(typeof galleryPhotos !== 'undefined') {
-                setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
+            
+            if(window.gpGalleryData) {
+                setupPagination('photo-gallery-container', 'photo-pagination', window.gpGalleryData.photos, 'photo');
+                setupPagination('video-gallery-container', 'video-pagination', window.gpGalleryData.videos, 'video');
             }
-            if(typeof galleryVideos !== 'undefined') {
+            
+            else if(typeof galleryPhotos !== 'undefined') {
+                setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
                 setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
             }
         });
