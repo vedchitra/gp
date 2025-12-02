@@ -304,14 +304,12 @@
         .ba-carousel-wrapper { position: relative; max-width: 800px; margin: 0 auto; padding-bottom: 20px; }
         .ba-slide { display: none; width: 100%; }
         .ba-slide.active { display: block; animation: fade 0.8s; }
-        
         .ba-container {
             position: relative; width: 100%; height: 400px; overflow: hidden;
             border-radius: 10px; border: 4px solid #fff; margin: 0 auto;
         }
         .ba-img-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
         .ba-img-container img { width: 100%; height: 100%; object-fit: cover; }
-        
         .ba-img-container.before { width: 50%; border-right: 3px solid #fff; z-index: 2; }
         .ba-label {
             position: absolute; top: 15px; padding: 5px 12px; background: rgba(0,0,0,0.6);
@@ -319,7 +317,6 @@
         }
         .before .ba-label { left: 15px; }
         .after .ba-label { right: 15px; }
-
         .ba-slider {
             position: absolute; top: 50%; left: 0; width: 100%; height: 100%; opacity: 0;
             cursor: ew-resize; z-index: 10; transform: translateY(-50%); margin: 0;
@@ -334,20 +331,15 @@
             background: #fff; color: #222; width: 30px; height: 30px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center; font-size: 14px;
         }
-        
         .ba-caption { margin-top: 15px; font-size: 18px; font-style: italic; color: #ccc; }
-        
         .ba-controls { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
         .ba-controls button {
             background: transparent; border: 1px solid #fff; color: #fff; width: 40px; height: 40px;
             border-radius: 50%; cursor: pointer; transition: 0.3s;
         }
         .ba-controls button:hover { background: #fff; color: #222; }
-
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
 
-         
-        
          
         .schemes-links-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;
@@ -363,18 +355,14 @@
         .scheme-link-card h3 { margin: 10px 0; font-size: 24px; font-weight: 700; }
         .scheme-link-card p { font-size: 16px; margin: 0; opacity: 0.9; }
 
-         
         .scheme-table th { background: #000080 !important; color: white; }
         .btn-small { 
             background: var(--secondary); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
             text-decoration: none; display: inline-block;
         }
         .scheme-details summary { cursor: pointer; color: var(--blue); font-weight: bold; }
-        .scheme-details p { 
-            margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; 
-        }
+        .scheme-details p { margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; }
 
-         
         .video-section-bg { background: #222; color: white; border-radius: 15px; padding: 30px; margin-top: 40px; }
         .video-section-bg .section-title { color: white; border-bottom-color: #555; }
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -388,7 +376,6 @@
         .calendar-table tr:nth-child(even) { background: #f0f8ff; }
         .calendar-table td i { margin-right: 8px; color: var(--primary); }
 
-         
         .budget-chart-container {
             display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 20px 0; gap: 30px;
         }
@@ -401,8 +388,6 @@
         .chart-legend span { display: block; width: 15px; height: 15px; margin-right: 12px; border-radius: 3px; }
 
          
-        
-         
         .contact-info-box .contact-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px;
         }
@@ -412,20 +397,15 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s;
         }
         .contact-item:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        
         .icon-circle {
             width: 50px; height: 50px; background: var(--light); border-radius: 50%;
             display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
         }
         .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; white-space: pre-wrap; }
-        .contact-item a { color: var(--blue); font-weight: 600; text-decoration: none; }
-        .contact-item a:hover { text-decoration: underline; }
-
-         
+        
         .map-responsive { overflow: hidden; padding-bottom: 50%; position: relative; height: 0; border-radius: 15px; border: 1px solid #ddd; }
         .map-responsive iframe { left: 0; top: 0; height: 100%; width: 100%; position: absolute; }
 
-         
         .feedback-btn {
             display: inline-block; background: var(--secondary); color: white; padding: 15px 35px;
             border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
@@ -433,7 +413,6 @@
         }
         .feedback-btn:hover { transform: translateY(-3px); background: #0f6e06; color: white; }
 
-         
         .whatsapp-section { background: linear-gradient(135deg, #dcf8c6 0%, #ffffff 100%); border: 1px solid #25D366; }
         .whatsapp-btn {
             display: inline-block; background: #25D366; color: white; padding: 12px 30px;
@@ -441,7 +420,26 @@
             margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
         }
         .whatsapp-btn:hover { background: #128C7E; color: white; }
-        .text-center { text-align: center; }
+
+         
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;
+        }
+        .gallery-item { display: none;   }
+        .gallery-item img {
+            width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
+            border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s; cursor: pointer;
+        }
+        .gallery-item img:hover { transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+
+        .pagination-controls { text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; }
+        .pagination-controls button {
+            background: var(--blue); color: white; border: none; padding: 10px 20px;
+            margin: 0 10px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s;
+        }
+        .pagination-controls button:hover:not(:disabled) { background: var(--primary); }
+        .pagination-controls button:disabled { background: #ccc; cursor: not-allowed; }
 
          
         .footer {
@@ -453,7 +451,6 @@
         .footer-links a:hover { color: var(--white); }
         .developer-credit { margin-top: 20px; border-top: 1px solid #444; padding-top: 15px; font-size: 12px; }
 
-         
         @media (max-width: 768px) {
             .header-main { flex-direction: column; text-align: center; padding: 20px; }
             .logo { margin: 0 0 15px 0; }
@@ -465,6 +462,12 @@
     </style>
 </head>
 <body>
+
+    
+    <div class="top-bar">
+        <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
+        <div><i class="fas fa-language"></i> मराठी</div>
+    </div>
 
     
     <header class="header-main">
@@ -485,6 +488,7 @@
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="">घोषणा</a>
             <a href="budget.html" class="active">अर्थसंकल्प</a>
+            <a href="gallery.html" class="">गॅलरी</a> 
             <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
@@ -510,22 +514,22 @@
         <div class="about-section">
             <h2 class="section-title">💸 खर्चाचे विभाजन (आपला रुपया कुठे जातो?)</h2>
             <div class="budget-chart-container" style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:center; padding:20px 0;">
-                <div class="pie-chart" style="width:250px; height:250px; border-radius:50%; background: conic-gradient(#FF6384 0% 10%, #36A2EB 10% 40%, #FFCE56 40% 50%, #4BC0C0 50% 98%, #9966FF 98% 100%); box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+                <div class="pie-chart" style="width:250px; height:250px; border-radius:50%; background: conic-gradient(#FF6384 0% 10%, #36A2EB 10% 39%, #FFCE56 39% 48%, #4BC0C0 48% 95%, #9966FF 95% 100%); box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
                 <ul class="chart-legend" style="list-style:none; padding:20px;"><li style="display:flex; align-items:center; margin-bottom:5px;">
                     <span style="display:block; width:15px; height:15px; background:#FF6384; margin-right:10px; border-radius:3px;"></span>
                     पाणी : <strong>10%</strong>
                 </li><li style="display:flex; align-items:center; margin-bottom:5px;">
                     <span style="display:block; width:15px; height:15px; background:#36A2EB; margin-right:10px; border-radius:3px;"></span>
-                    पगार : <strong>30%</strong>
+                    पगार : <strong>29%</strong>
                 </li><li style="display:flex; align-items:center; margin-bottom:5px;">
                     <span style="display:block; width:15px; height:15px; background:#FFCE56; margin-right:10px; border-radius:3px;"></span>
-                    वीज : <strong>10%</strong>
+                    वीज : <strong>9%</strong>
                 </li><li style="display:flex; align-items:center; margin-bottom:5px;">
                     <span style="display:block; width:15px; height:15px; background:#4BC0C0; margin-right:10px; border-radius:3px;"></span>
-                    इतर : <strong>48%</strong>
+                    इतर : <strong>47%</strong>
                 </li><li style="display:flex; align-items:center; margin-bottom:5px;">
                     <span style="display:block; width:15px; height:15px; background:#9966FF; margin-right:10px; border-radius:3px;"></span>
-                    Web: <strong>2%</strong>
+                    Web: <strong>5%</strong>
                 </li></ul>
             </div>
         </div>    </main>
@@ -551,7 +555,6 @@
             const beforeImg = slide.querySelector('.before');
             const handle = slide.querySelector('.ba-handle');
             const val = input.value;
-            
             beforeImg.style.width = val + "%";
             handle.style.left = val + "%";
         }
@@ -563,22 +566,88 @@
         function showSlide(n) {
             if(slides.length === 0) return;
             slides.forEach(s => s.classList.remove('active'));
-            
             slideIndex = (n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
-        
         function nextSlide() { showSlide(slideIndex + 1); }
         function prevSlide() { showSlide(slideIndex - 1); }
 
-        
         if(slides.length > 0) {
             slides[0].classList.add('active');
-            
-            if(slides.length > 1) {
-                setInterval(nextSlide, 5000); 
-            }
+            if(slides.length > 1) setInterval(nextSlide, 5000);
         }
+
+        
+        const ITEMS_PER_PAGE = 15;
+
+        function setupPagination(containerId, btnContainerId, itemsArray, type) {
+            const container = document.getElementById(containerId);
+            const btnContainer = document.getElementById(btnContainerId);
+            
+            
+            if(!container || !itemsArray || itemsArray.length === 0) return;
+
+            let currentPage = 1;
+            const totalPages = Math.ceil(itemsArray.length / ITEMS_PER_PAGE);
+
+            function renderPage(page) {
+                container.innerHTML = "";
+                const start = (page - 1) * ITEMS_PER_PAGE;
+                const end = start + ITEMS_PER_PAGE;
+                const pageItems = itemsArray.slice(start, end);
+
+                pageItems.forEach(item => {
+                    let html = "";
+                    if(type === 'photo') {
+                        html = `<div class="gallery-item" style="display:block;"><img src="${item}" alt="Gallery Photo" onclick="window.open(this.src, '_blank')"></div>`;
+                    } else {
+                        let videoId = "";
+                        if(item.url.includes("v=")) videoId = item.url.split('v=')[1].split('&')[0];
+                        else if(item.url.includes("youtu.be/")) videoId = item.url.split('youtu.be/')[1].split('?')[0];
+                        
+                        if(videoId) {
+                            html = `<div class="video-container" style="margin-bottom:0;"><iframe src="https:
+                        }
+                    }
+                    container.innerHTML += html;
+                });
+
+                
+                btnContainer.innerHTML = "";
+                if(totalPages > 1) {
+                    const prevBtn = document.createElement("button");
+                    prevBtn.innerText = "Previous 15";
+                    prevBtn.disabled = (page === 1);
+                    prevBtn.onclick = () => renderPage(page - 1);
+
+                    const nextBtn = document.createElement("button");
+                    nextBtn.innerText = "Next 15";
+                    nextBtn.disabled = (page === totalPages);
+                    nextBtn.onclick = () => renderPage(page + 1);
+
+                    const pageInfo = document.createElement("span");
+                    pageInfo.innerText = ` Page ${page} of ${totalPages} `;
+                    pageInfo.style.margin = "0 10px";
+
+                    btnContainer.appendChild(prevBtn);
+                    btnContainer.appendChild(pageInfo);
+                    btnContainer.appendChild(nextBtn);
+                }
+            }
+
+            
+            renderPage(1);
+        }
+
+        
+        window.onload = function() {
+            if(typeof galleryPhotos !== 'undefined') {
+                setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
+            }
+            if(typeof galleryVideos !== 'undefined') {
+                setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
+            }
+        };
     </script>
 
 </body>
