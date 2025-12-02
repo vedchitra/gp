@@ -436,9 +436,10 @@
 
          
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;
         }
-        .gallery-item { display: none;   }
+         
+        .gallery-item { display: none; }
         .gallery-item img {
             width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
             border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -501,7 +502,7 @@
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="">घोषणा</a>
             <a href="budget.html" class="">अर्थसंकल्प</a>
-            <a href="gallery.html" class="active">गॅलरी</a> 
+            <a href="gallery.html" class="active">गॅलरी</a>
             <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
@@ -638,14 +639,14 @@
         }
 
         
-        window.onload = function() {
+        window.addEventListener('DOMContentLoaded', function() {
             if(typeof galleryPhotos !== 'undefined') {
                 setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
             }
             if(typeof galleryVideos !== 'undefined') {
                 setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
             }
-        };
+        });
     </script>
 
 </body>
