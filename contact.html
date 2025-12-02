@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | ग्रामपंचायत डिजिटल सेवा</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -304,12 +303,14 @@
         .ba-carousel-wrapper { position: relative; max-width: 800px; margin: 0 auto; padding-bottom: 20px; }
         .ba-slide { display: none; width: 100%; }
         .ba-slide.active { display: block; animation: fade 0.8s; }
+        
         .ba-container {
             position: relative; width: 100%; height: 400px; overflow: hidden;
             border-radius: 10px; border: 4px solid #fff; margin: 0 auto;
         }
         .ba-img-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
         .ba-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        
         .ba-img-container.before { width: 50%; border-right: 3px solid #fff; z-index: 2; }
         .ba-label {
             position: absolute; top: 15px; padding: 5px 12px; background: rgba(0,0,0,0.6);
@@ -317,6 +318,7 @@
         }
         .before .ba-label { left: 15px; }
         .after .ba-label { right: 15px; }
+
         .ba-slider {
             position: absolute; top: 50%; left: 0; width: 100%; height: 100%; opacity: 0;
             cursor: ew-resize; z-index: 10; transform: translateY(-50%); margin: 0;
@@ -331,15 +333,20 @@
             background: #fff; color: #222; width: 30px; height: 30px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center; font-size: 14px;
         }
+        
         .ba-caption { margin-top: 15px; font-size: 18px; font-style: italic; color: #ccc; }
+        
         .ba-controls { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
         .ba-controls button {
             background: transparent; border: 1px solid #fff; color: #fff; width: 40px; height: 40px;
             border-radius: 50%; cursor: pointer; transition: 0.3s;
         }
         .ba-controls button:hover { background: #fff; color: #222; }
+
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
 
+         
+        
          
         .schemes-links-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;
@@ -355,14 +362,18 @@
         .scheme-link-card h3 { margin: 10px 0; font-size: 24px; font-weight: 700; }
         .scheme-link-card p { font-size: 16px; margin: 0; opacity: 0.9; }
 
+         
         .scheme-table th { background: #000080 !important; color: white; }
         .btn-small { 
             background: var(--secondary); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
             text-decoration: none; display: inline-block;
         }
         .scheme-details summary { cursor: pointer; color: var(--blue); font-weight: bold; }
-        .scheme-details p { margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; }
+        .scheme-details p { 
+            margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; 
+        }
 
+         
         .video-section-bg { background: #222; color: white; border-radius: 15px; padding: 30px; margin-top: 40px; }
         .video-section-bg .section-title { color: white; border-bottom-color: #555; }
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -376,6 +387,7 @@
         .calendar-table tr:nth-child(even) { background: #f0f8ff; }
         .calendar-table td i { margin-right: 8px; color: var(--primary); }
 
+         
         .budget-chart-container {
             display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 20px 0; gap: 30px;
         }
@@ -388,6 +400,8 @@
         .chart-legend span { display: block; width: 15px; height: 15px; margin-right: 12px; border-radius: 3px; }
 
          
+        
+         
         .contact-info-box .contact-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px;
         }
@@ -397,15 +411,20 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s;
         }
         .contact-item:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        
         .icon-circle {
             width: 50px; height: 50px; background: var(--light); border-radius: 50%;
             display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
         }
         .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; white-space: pre-wrap; }
-        
+        .contact-item a { color: var(--blue); font-weight: 600; text-decoration: none; }
+        .contact-item a:hover { text-decoration: underline; }
+
+         
         .map-responsive { overflow: hidden; padding-bottom: 50%; position: relative; height: 0; border-radius: 15px; border: 1px solid #ddd; }
         .map-responsive iframe { left: 0; top: 0; height: 100%; width: 100%; position: absolute; }
 
+         
         .feedback-btn {
             display: inline-block; background: var(--secondary); color: white; padding: 15px 35px;
             border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
@@ -413,6 +432,7 @@
         }
         .feedback-btn:hover { transform: translateY(-3px); background: #0f6e06; color: white; }
 
+         
         .whatsapp-section { background: linear-gradient(135deg, #dcf8c6 0%, #ffffff 100%); border: 1px solid #25D366; }
         .whatsapp-btn {
             display: inline-block; background: #25D366; color: white; padding: 12px 30px;
@@ -420,26 +440,26 @@
             margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
         }
         .whatsapp-btn:hover { background: #128C7E; color: white; }
+        .text-center { text-align: center; }
 
          
-        .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;
-        }
-        .gallery-item { display: none;   }
-        .gallery-item img {
-            width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
-            border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s; cursor: pointer;
-        }
-        .gallery-item img:hover { transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-
-        .pagination-controls { text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; }
-        .pagination-controls button {
-            background: var(--blue); color: white; border: none; padding: 10px 20px;
-            margin: 0 10px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s;
-        }
-        .pagination-controls button:hover:not(:disabled) { background: var(--primary); }
+        .gallery-section { padding: 20px 0; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px; }
+        .gallery-item { background: #fff; border: 1px solid #ddd; padding: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; transition: transform 0.3s; cursor: pointer; }
+        .gallery-item:hover { transform: scale(1.03); }
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+        .gallery-item .caption { padding: 10px; text-align: center; color: #555; font-size: 14px; font-weight: 600; }
+        
+        .pagination-controls { text-align: center; margin-top: 20px; }
+        .pagination-controls button { background: var(--primary); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin: 0 5px; font-weight: bold; }
         .pagination-controls button:disabled { background: #ccc; cursor: not-allowed; }
+
+         
+        .lightbox-modal { display: none; position: fixed; z-index: 2000; padding-top: 60px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); }
+        .lightbox-content { margin: auto; display: block; width: 80%; max-width: 800px; max-height: 80vh; object-fit: contain; border: 4px solid white; border-radius: 5px; }
+        .close-lightbox { position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .close-lightbox:hover { color: #bbb; }
+        .lightbox-caption { margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; font-size: 16px; }
 
          
         .footer {
@@ -451,6 +471,7 @@
         .footer-links a:hover { color: var(--white); }
         .developer-credit { margin-top: 20px; border-top: 1px solid #444; padding-top: 15px; font-size: 12px; }
 
+         
         @media (max-width: 768px) {
             .header-main { flex-direction: column; text-align: center; padding: 20px; }
             .logo { margin: 0 0 15px 0; }
@@ -463,13 +484,11 @@
 </head>
 <body>
 
-    
-    <div class="top-bar">
+  <div class="top-bar">
         <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
         <div><i class="fas fa-language"></i> मराठी</div>
     </div>
 
-    
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -478,31 +497,41 @@
         </div>
     </header>
 
-    
     <div class="nav-wrapper">
         <nav class="nav">
-            <a href="home.html" class="">मुख्यपृष्ठ</a>
-            <a href="about.html" class="">आमच्याबद्दल</a>
-            <a href="services.html" class="">नागरिक सुविधा</a>
-            <a href="projects.html" class="">विकास कामे</a>
-            <a href="schemes.html" class="">योजना</a>
-            <a href="announcements.html" class="">घोषणा</a>
-            <a href="budget.html" class="">अर्थसंकल्प</a>
-            <a href="gallery.html" class="">गॅलरी</a> 
-            <a href="contact.html" class="active">संपर्क</a>
+            <a href="?page=home" class="">मुख्यपृष्ठ</a>
+            <a href="?page=about" class="">आमच्याबद्दल</a>
+            <a href="?page=services" class="">नागरिक सुविधा</a>
+            <a href="?page=projects" class="">विकास कामे</a>
+            <a href="?page=schemes" class="">योजना</a>
+            <a href="?page=announcements" class="">घोषणा</a>
+            <a href="?page=budget" class="">अर्थसंकल्प</a>
+            <a href="?page=gallery" class="">गॅलरी</a>
+            <a href="?page=contact" class="active">संपर्क</a>
         </nav>
     </div>
 
-    
     <main class="container">
         
         <div class="about-section contact-info-box">
             <h2 class="section-title">संपर्क तपशील (Contact Details)</h2>
             <div class="contact-grid">
-                <div class="contact-item"><div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div><div class="info"><strong>पत्ता:</strong><br>ग्रामपंचायत कार्यालय, मु. पो. ..., ता. ..., जि. ...</div></div>
-                <div class="contact-item"><div class="icon-circle"><i class="fas fa-phone-alt"></i></div><div class="info"><strong>फोन:</strong><br><a href="tel:7498663848">7498663848</a></div></div>
-                <div class="contact-item"><div class="icon-circle"><i class="fas fa-envelope"></i></div><div class="info"><strong>ई-मेल:</strong><br><a href="mailto:vedchitragroups@gmail.com">vedchitragroups@gmail.com</a></div></div>
-                <div class="contact-item"><div class="icon-circle"><i class="far fa-clock"></i></div><div class="info"><strong>कामकाजाची वेळ:</strong><br>सकाळी 10:00 ते सायं 05:30</div></div>
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info"><strong>पत्ता:</strong><br>ग्रामपंचायत कार्यालय, मु. पो. ..., ता. ..., जि. ...</div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info"><strong>फोन:</strong><br><a href="tel:07498663848">07498663848</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <div class="info"><strong>ई-मेल:</strong><br><a href="mailto:vedchitragroups@gmail.com">vedchitragroups@gmail.com</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="far fa-clock"></i></div>
+                    <div class="info"><strong>कामकाजाची वेळ:</strong><br>सकाळी 10:00 ते सायं 05:30</div>
+                </div>
             </div>
         </div>
         <div class="about-section">
@@ -522,12 +551,17 @@
             <a href="https://wa.me/917498663848" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp (7498663848)</a>
         </div>    </main>
 
-    
+    <div id="imgModal" class="lightbox-modal">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="img01">
+        <div id="caption" class="lightbox-caption"></div>
+    </div>
+
     <footer class="footer">
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
         <div class="footer-links">
-            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="projects.html">Projects</a> | <a href="schemes.html">Schemes</a> | <a href="contact.html">Contact</a>
+            <a href="?page=home">Home</a> | <a href="?page=about">About</a> | <a href="?page=projects">Projects</a> | <a href="?page=schemes">Schemes</a> | <a href="?page=contact">Contact</a>
         </div>
         <div class="developer-credit">
             Developed under <strong>CM Samruddha Panchayat Abhiyan</strong><br>
@@ -535,7 +569,6 @@
         </div>
     </footer>
 
-    
     <script>
         
         function moveSlider(input) {
@@ -543,6 +576,7 @@
             const beforeImg = slide.querySelector('.before');
             const handle = slide.querySelector('.ba-handle');
             const val = input.value;
+            
             beforeImg.style.width = val + "%";
             handle.style.left = val + "%";
         }
@@ -554,88 +588,43 @@
         function showSlide(n) {
             if(slides.length === 0) return;
             slides.forEach(s => s.classList.remove('active'));
+            
             slideIndex = (n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
+        
         function nextSlide() { showSlide(slideIndex + 1); }
         function prevSlide() { showSlide(slideIndex - 1); }
 
+        
         if(slides.length > 0) {
             slides[0].classList.add('active');
-            if(slides.length > 1) setInterval(nextSlide, 5000);
+            
+            if(slides.length > 1) {
+                setInterval(nextSlide, 5000); 
+            }
         }
 
         
-        const ITEMS_PER_PAGE = 15;
-
-        function setupPagination(containerId, btnContainerId, itemsArray, type) {
-            const container = document.getElementById(containerId);
-            const btnContainer = document.getElementById(btnContainerId);
-            
-            
-            if(!container || !itemsArray || itemsArray.length === 0) return;
-
-            let currentPage = 1;
-            const totalPages = Math.ceil(itemsArray.length / ITEMS_PER_PAGE);
-
-            function renderPage(page) {
-                container.innerHTML = "";
-                const start = (page - 1) * ITEMS_PER_PAGE;
-                const end = start + ITEMS_PER_PAGE;
-                const pageItems = itemsArray.slice(start, end);
-
-                pageItems.forEach(item => {
-                    let html = "";
-                    if(type === 'photo') {
-                        html = `<div class="gallery-item" style="display:block;"><img src="${item}" alt="Gallery Photo" onclick="window.open(this.src, '_blank')"></div>`;
-                    } else {
-                        let videoId = "";
-                        if(item.url.includes("v=")) videoId = item.url.split('v=')[1].split('&')[0];
-                        else if(item.url.includes("youtu.be/")) videoId = item.url.split('youtu.be/')[1].split('?')[0];
-                        
-                        if(videoId) {
-                            html = `<div class="video-container" style="margin-bottom:0;"><iframe src="https:
-                        }
-                    }
-                    container.innerHTML += html;
-                });
-
+        
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.parentElement.classList.contains('gallery-item') && e.target.tagName === 'IMG') {
+                var modal = document.getElementById("imgModal");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
                 
-                btnContainer.innerHTML = "";
-                if(totalPages > 1) {
-                    const prevBtn = document.createElement("button");
-                    prevBtn.innerText = "Previous 15";
-                    prevBtn.disabled = (page === 1);
-                    prevBtn.onclick = () => renderPage(page - 1);
-
-                    const nextBtn = document.createElement("button");
-                    nextBtn.innerText = "Next 15";
-                    nextBtn.disabled = (page === totalPages);
-                    nextBtn.onclick = () => renderPage(page + 1);
-
-                    const pageInfo = document.createElement("span");
-                    pageInfo.innerText = ` Page ${page} of ${totalPages} `;
-                    pageInfo.style.margin = "0 10px";
-
-                    btnContainer.appendChild(prevBtn);
-                    btnContainer.appendChild(pageInfo);
-                    btnContainer.appendChild(nextBtn);
-                }
+                modal.style.display = "block";
+                modalImg.src = e.target.src;
+                
+                
+                var captionDiv = e.target.nextElementSibling;
+                captionText.innerHTML = captionDiv ? captionDiv.innerHTML : "";
             }
+        });
 
-            
-            renderPage(1);
+        function closeLightbox() {
+            document.getElementById("imgModal").style.display = "none";
         }
-
-        
-        window.onload = function() {
-            if(typeof galleryPhotos !== 'undefined') {
-                setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
-            }
-            if(typeof galleryVideos !== 'undefined') {
-                setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
-            }
-        };
     </script>
 
 </body>
