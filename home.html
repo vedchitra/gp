@@ -304,12 +304,14 @@
         .ba-carousel-wrapper { position: relative; max-width: 800px; margin: 0 auto; padding-bottom: 20px; }
         .ba-slide { display: none; width: 100%; }
         .ba-slide.active { display: block; animation: fade 0.8s; }
+        
         .ba-container {
             position: relative; width: 100%; height: 400px; overflow: hidden;
             border-radius: 10px; border: 4px solid #fff; margin: 0 auto;
         }
         .ba-img-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
         .ba-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        
         .ba-img-container.before { width: 50%; border-right: 3px solid #fff; z-index: 2; }
         .ba-label {
             position: absolute; top: 15px; padding: 5px 12px; background: rgba(0,0,0,0.6);
@@ -317,6 +319,7 @@
         }
         .before .ba-label { left: 15px; }
         .after .ba-label { right: 15px; }
+
         .ba-slider {
             position: absolute; top: 50%; left: 0; width: 100%; height: 100%; opacity: 0;
             cursor: ew-resize; z-index: 10; transform: translateY(-50%); margin: 0;
@@ -331,15 +334,20 @@
             background: #fff; color: #222; width: 30px; height: 30px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center; font-size: 14px;
         }
+        
         .ba-caption { margin-top: 15px; font-size: 18px; font-style: italic; color: #ccc; }
+        
         .ba-controls { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
         .ba-controls button {
             background: transparent; border: 1px solid #fff; color: #fff; width: 40px; height: 40px;
             border-radius: 50%; cursor: pointer; transition: 0.3s;
         }
         .ba-controls button:hover { background: #fff; color: #222; }
+
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
 
+         
+        
          
         .schemes-links-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;
@@ -355,14 +363,18 @@
         .scheme-link-card h3 { margin: 10px 0; font-size: 24px; font-weight: 700; }
         .scheme-link-card p { font-size: 16px; margin: 0; opacity: 0.9; }
 
+         
         .scheme-table th { background: #000080 !important; color: white; }
         .btn-small { 
             background: var(--secondary); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
             text-decoration: none; display: inline-block;
         }
         .scheme-details summary { cursor: pointer; color: var(--blue); font-weight: bold; }
-        .scheme-details p { margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; }
+        .scheme-details p { 
+            margin-top: 10px; color: #555; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; 
+        }
 
+         
         .video-section-bg { background: #222; color: white; border-radius: 15px; padding: 30px; margin-top: 40px; }
         .video-section-bg .section-title { color: white; border-bottom-color: #555; }
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -397,6 +409,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s;
         }
         .contact-item:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        
         .icon-circle {
             width: 50px; height: 50px; background: var(--light); border-radius: 50%;
             display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
@@ -425,7 +438,8 @@
         .gallery-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;
         }
-        .gallery-item { display: none;   }
+         
+        .gallery-item { display: none; }
         .gallery-item img {
             width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
             border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -488,7 +502,7 @@
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="">घोषणा</a>
             <a href="budget.html" class="">अर्थसंकल्प</a>
-            <a href="gallery.html" class="">गॅलरी</a> 
+            <a href="gallery.html" class="">गॅलरी</a>
             <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
@@ -513,7 +527,7 @@ Maruti Suzuki has a total of 23 car models available in India right now, includi
           <a href="tel:666666666" class="btn-call"><i class="fas fa-phone"></i> कॉल करा</a>
         </div><div class="content-img"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp7059220.jpg" alt="Image"></div><a href="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp9183845.pdf" class="download-btn" target="_blank"><i class="fas fa-file-pdf"></i> डाउनलोड करा</a>
         <div class="quick-info-container">
-            <div class="stat-card"><i class="fas fa-users"></i><h3>1560</h3><p>लोकसंख्या</p></div>
+            <div class="stat-card"><i class="fas fa-users"></i><h3>1577</h3><p>लोकसंख्या</p></div>
             <div class="stat-card"><i class="fas fa-home"></i><h3>435</h3><p>एकूण घरे</p></div>
             <div class="stat-card"><i class="fas fa-graduation-cap"></i><h3>76.4</h3><p>साक्षरता दर (%)</p></div>
             <div class="stat-card"><i class="fas fa-map-signs"></i><h3>9</h3><p>प्रभाग संख्या</p></div>
@@ -548,6 +562,7 @@ Maruti Suzuki has a total of 23 car models available in India right now, includi
             const beforeImg = slide.querySelector('.before');
             const handle = slide.querySelector('.ba-handle');
             const val = input.value;
+            
             beforeImg.style.width = val + "%";
             handle.style.left = val + "%";
         }
@@ -559,15 +574,21 @@ Maruti Suzuki has a total of 23 car models available in India right now, includi
         function showSlide(n) {
             if(slides.length === 0) return;
             slides.forEach(s => s.classList.remove('active'));
+            
             slideIndex = (n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
+        
         function nextSlide() { showSlide(slideIndex + 1); }
         function prevSlide() { showSlide(slideIndex - 1); }
 
+        
         if(slides.length > 0) {
             slides[0].classList.add('active');
-            if(slides.length > 1) setInterval(nextSlide, 5000);
+            
+            if(slides.length > 1) {
+                setInterval(nextSlide, 5000); 
+            }
         }
 
         
@@ -633,14 +654,14 @@ Maruti Suzuki has a total of 23 car models available in India right now, includi
         }
 
         
-        window.onload = function() {
+        window.addEventListener('DOMContentLoaded', function() {
             if(typeof galleryPhotos !== 'undefined') {
                 setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
             }
             if(typeof galleryVideos !== 'undefined') {
                 setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
             }
-        };
+        });
     </script>
 
 </body>
