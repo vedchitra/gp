@@ -438,7 +438,8 @@
         .gallery-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;
         }
-        .gallery-item { display: none;   }
+         
+        .gallery-item { display: none; }
         .gallery-item img {
             width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
             border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -495,7 +496,7 @@
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="">घोषणा</a>
             <a href="budget.html" class="">अर्थसंकल्प</a>
-            <a href="gallery.html" class="active">गॅलरी</a> 
+            <a href="gallery.html" class="active">गॅलरी</a>
             <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
@@ -504,7 +505,7 @@
     <main class="container">
         <script>
             window.gpGalleryData = {
-                photos: ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4347852.png","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp2444862.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg"],
+                photos: ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4347852.png","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg"],
                 videos: []
             };
         </script>
@@ -528,10 +529,9 @@
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
         <div class="footer-links">
-            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="projects.html">Projects</a> | <a href="schemes.html">Schemes</a> | <a href="contact.html">Contact</a>
+            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a>
         </div>
         <div class="developer-credit">
-            Developed under <strong>CM Samruddha Panchayat Abhiyan</strong><br>
             Powered by Google Sheets CMS
         </div>
     </footer>
@@ -641,11 +641,6 @@
             if(window.gpGalleryData) {
                 setupPagination('photo-gallery-container', 'photo-pagination', window.gpGalleryData.photos, 'photo');
                 setupPagination('video-gallery-container', 'video-pagination', window.gpGalleryData.videos, 'video');
-            }
-            
-            else if(typeof galleryPhotos !== 'undefined') {
-                setupPagination('photo-gallery-container', 'photo-pagination', galleryPhotos, 'photo');
-                setupPagination('video-gallery-container', 'video-pagination', galleryVideos, 'video');
             }
         });
     </script>
