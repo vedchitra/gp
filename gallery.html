@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | ग्रामपंचायत डिजिटल सेवा</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -388,6 +387,7 @@
         .calendar-table tr:nth-child(even) { background: #f0f8ff; }
         .calendar-table td i { margin-right: 8px; color: var(--primary); }
 
+         
         .budget-chart-container {
             display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 20px 0; gap: 30px;
         }
@@ -399,6 +399,8 @@
         .chart-legend li { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; }
         .chart-legend span { display: block; width: 15px; height: 15px; margin-right: 12px; border-radius: 3px; }
 
+         
+        
          
         .contact-info-box .contact-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px;
@@ -415,10 +417,14 @@
             display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
         }
         .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; white-space: pre-wrap; }
-        
+        .contact-item a { color: var(--blue); font-weight: 600; text-decoration: none; }
+        .contact-item a:hover { text-decoration: underline; }
+
+         
         .map-responsive { overflow: hidden; padding-bottom: 50%; position: relative; height: 0; border-radius: 15px; border: 1px solid #ddd; }
         .map-responsive iframe { left: 0; top: 0; height: 100%; width: 100%; position: absolute; }
 
+         
         .feedback-btn {
             display: inline-block; background: var(--secondary); color: white; padding: 15px 35px;
             border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
@@ -426,6 +432,7 @@
         }
         .feedback-btn:hover { transform: translateY(-3px); background: #0f6e06; color: white; }
 
+         
         .whatsapp-section { background: linear-gradient(135deg, #dcf8c6 0%, #ffffff 100%); border: 1px solid #25D366; }
         .whatsapp-btn {
             display: inline-block; background: #25D366; color: white; padding: 12px 30px;
@@ -433,27 +440,32 @@
             margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
         }
         .whatsapp-btn:hover { background: #128C7E; color: white; }
+        .text-center { text-align: center; }
 
          
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
         }
-         
-        .gallery-item { display: none; }
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            transition: 0.3s;
+            background: #fff;
+        }
+        .gallery-item:hover { transform: scale(1.02); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
         .gallery-item img {
-            width: 100%; height: 220px; object-fit: cover; border-radius: 8px;
-            border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s; cursor: pointer;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
         }
-        .gallery-item img:hover { transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-
-        .pagination-controls { text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; }
-        .pagination-controls button {
-            background: var(--blue); color: white; border: none; padding: 10px 20px;
-            margin: 0 10px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s;
-        }
-        .pagination-controls button:hover:not(:disabled) { background: var(--primary); }
-        .pagination-controls button:disabled { background: #ccc; cursor: not-allowed; }
+        .vid-item iframe { width: 100%; height: 200px; }
 
          
         .footer {
@@ -465,6 +477,7 @@
         .footer-links a:hover { color: var(--white); }
         .developer-credit { margin-top: 20px; border-top: 1px solid #444; padding-top: 15px; font-size: 12px; }
 
+         
         @media (max-width: 768px) {
             .header-main { flex-direction: column; text-align: center; padding: 20px; }
             .logo { margin: 0 0 15px 0; }
@@ -477,7 +490,11 @@
 </head>
 <body>
 
-    
+  <div class="top-bar">
+        <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
+        <div><i class="fas fa-language"></i> मराठी</div>
+    </div>
+
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -486,7 +503,6 @@
         </div>
     </header>
 
-    
     <div class="nav-wrapper">
         <nav class="nav">
             <a href="home.html" class="">मुख्यपृष्ठ</a>
@@ -501,42 +517,21 @@
         </nav>
     </div>
 
-    
     <main class="container">
-        <script>
-            window.gpGalleryData = {
-                photos: ["https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4347852.png","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg","https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg"],
-                videos: []
-            };
-        </script>
-        <div class="about-section gallery-box">
-            <h2 class="section-title">📸 फोटो गॅलरी</h2>
-            <div id="photo-gallery-container" class="gallery-grid">
-                
-            </div>
-            <div class="pagination-controls" id="photo-pagination"></div>
-        </div>
-        <div class="about-section gallery-box">
-            <h2 class="section-title">🎥 व्हिडिओ गॅलरी</h2>
-            <div id="video-gallery-container" class="video-grid">
-                
-            </div>
-            <div class="pagination-controls" id="video-pagination"></div>
-        </div>    </main>
+        <div class="about-section"><h2 class="section-title">📸 फोटो गॅलरी</h2><div class="gallery-grid"><div class="gallery-item"><a href="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp3895791.jpg" target="_blank"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp3895791.jpg" loading="lazy"></a></div><div class="gallery-item"><a href="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4347852.png" target="_blank"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4347852.png" loading="lazy"></a></div><div class="gallery-item"><a href="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg" target="_blank"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1058184.jpg" loading="lazy"></a></div><div class="gallery-item"><a href="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg" target="_blank"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4567028.jpg" loading="lazy"></a></div></div></div>    </main>
 
-    
     <footer class="footer">
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
         <div class="footer-links">
-            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a>
+            <a href="home.html">Home</a> | <a href="about.html">About</a> | <a href="projects.html">Projects</a> | <a href="schemes.html">Schemes</a> | <a href="contact.html">Contact</a>
         </div>
         <div class="developer-credit">
+            Developed under <strong>CM Samruddha Panchayat Abhiyan</strong><br>
             Powered by Google Sheets CMS
         </div>
     </footer>
 
-    
     <script>
         
         function moveSlider(input) {
@@ -572,77 +567,6 @@
                 setInterval(nextSlide, 5000); 
             }
         }
-
-        
-        const ITEMS_PER_PAGE = 15;
-
-        function setupPagination(containerId, btnContainerId, itemsArray, type) {
-            const container = document.getElementById(containerId);
-            const btnContainer = document.getElementById(btnContainerId);
-            
-            
-            if(!container || !itemsArray || itemsArray.length === 0) return;
-
-            let currentPage = 1;
-            const totalPages = Math.ceil(itemsArray.length / ITEMS_PER_PAGE);
-
-            function renderPage(page) {
-                container.innerHTML = "";
-                const start = (page - 1) * ITEMS_PER_PAGE;
-                const end = start + ITEMS_PER_PAGE;
-                const pageItems = itemsArray.slice(start, end);
-
-                pageItems.forEach(item => {
-                    let html = "";
-                    if(type === 'photo') {
-                        html = `<div class="gallery-item" style="display:block;"><img src="${item}" alt="Gallery Photo" onclick="window.open(this.src, '_blank')"></div>`;
-                    } else {
-                        let videoId = "";
-                        if(item.url.includes("v=")) videoId = item.url.split('v=')[1].split('&')[0];
-                        else if(item.url.includes("youtu.be/")) videoId = item.url.split('youtu.be/')[1].split('?')[0];
-                        
-                        if(videoId) {
-                            html = `<div class="video-container" style="margin-bottom:0;"><iframe src="https:
-                        }
-                    }
-                    container.innerHTML += html;
-                });
-
-                
-                btnContainer.innerHTML = "";
-                if(totalPages > 1) {
-                    const prevBtn = document.createElement("button");
-                    prevBtn.innerText = "Previous 15";
-                    prevBtn.disabled = (page === 1);
-                    prevBtn.onclick = () => renderPage(page - 1);
-
-                    const nextBtn = document.createElement("button");
-                    nextBtn.innerText = "Next 15";
-                    nextBtn.disabled = (page === totalPages);
-                    nextBtn.onclick = () => renderPage(page + 1);
-
-                    const pageInfo = document.createElement("span");
-                    pageInfo.innerText = ` Page ${page} of ${totalPages} `;
-                    pageInfo.style.margin = "0 10px";
-
-                    btnContainer.appendChild(prevBtn);
-                    btnContainer.appendChild(pageInfo);
-                    btnContainer.appendChild(nextBtn);
-                }
-            }
-
-            
-            renderPage(1);
-        }
-
-        
-        window.addEventListener('DOMContentLoaded', function() {
-            
-            if(window.gpGalleryData) {
-                setupPagination('photo-gallery-container', 'photo-pagination', window.gpGalleryData.photos, 'photo');
-                setupPagination('video-gallery-container', 'video-pagination', window.gpGalleryData.videos, 'video');
-            }
-        });
     </script>
 
 </body>
