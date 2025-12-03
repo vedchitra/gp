@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | ग्रामपंचायत डिजिटल सेवा</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -417,7 +416,7 @@
             width: 50px; height: 50px; background: var(--light); border-radius: 50%;
             display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 20px;
         }
-        .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; }
+        .contact-item .info { font-size: 15px; color: #555; word-wrap: break-word; white-space: pre-wrap; }
         .contact-item a { color: var(--blue); font-weight: 600; text-decoration: none; }
         .contact-item a:hover { text-decoration: underline; }
 
@@ -441,6 +440,46 @@
             margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
         }
         .whatsapp-btn:hover { background: #128C7E; color: white; }
+        .text-center { text-align: center; }
+
+         
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            transition: 0.3s;
+            background: #fff;
+        }
+        .gallery-item:hover { transform: scale(1.02); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+        .vid-item iframe { width: 100%; height: 200px; }
+        
+         
+        .grievance-box {
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);  
+            color: white;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+        }
+        .grievance-btn {
+            display: inline-block; background: white; color: #d32f2f; padding: 15px 35px;
+            border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s;
+            margin-top: 15px;
+        }
+        .grievance-btn:hover { transform: translateY(-3px); background: #f8d7da; }
 
          
         .footer {
@@ -465,13 +504,11 @@
 </head>
 <body>
 
-    
-    <div class="top-bar">
+  <div class="top-bar">
         <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
         <div><i class="fas fa-language"></i> मराठी</div>
     </div>
 
-    
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -480,21 +517,20 @@
         </div>
     </header>
 
-    
     <div class="nav-wrapper">
         <nav class="nav">
             <a href="home.html" class="">मुख्यपृष्ठ</a>
             <a href="about.html" class="">आमच्याबद्दल</a>
-            <a href="services.html" class="">सुविधा</a>
+            <a href="services.html" class="">नागरिक सुविधा</a>
             <a href="projects.html" class="">विकास कामे</a>
             <a href="schemes.html" class="">योजना</a>
             <a href="announcements.html" class="active">घोषणा</a>
             <a href="budget.html" class="">अर्थसंकल्प</a>
+            <a href="gallery.html" class="">गॅलरी</a>
             <a href="contact.html" class="">संपर्क</a>
         </nav>
     </div>
 
-    
     <main class="container">
         
             <div class="about-section">
@@ -511,12 +547,11 @@
                 <div class="table-responsive">
                     <table class="roles-table calendar-table">
                         <thead><tr><th>क्र.</th><th>घटना / बैठक</th><th>तारीख</th><th>वेळ</th></tr></thead>
-                        <tbody><tr><td>1</td><td><strong>लसीकरण </strong></td><td><i class="far fa-calendar-alt"></i> 18/12/2025</td><td><i class="far fa-clock"></i> 11:25</td></tr><tr><td>2</td><td><strong>ग्रामसभा </strong></td><td><i class="far fa-calendar-alt"></i> 20/12/2025</td><td><i class="far fa-clock"></i> 19:41</td></tr><tr><td>3</td><td><strong>शिबिर </strong></td><td><i class="far fa-calendar-alt"></i> 26/12/2025</td><td><i class="far fa-clock"></i> 19:27</td></tr></tbody>
+                        <tbody><tr><td>1</td><td><strong>ग्रामसभा </strong></td><td><i class="far fa-calendar-alt"></i> 20/12/2025</td><td><i class="far fa-clock"></i> 19:41</td></tr><tr><td>2</td><td><strong>शिबिर </strong></td><td><i class="far fa-calendar-alt"></i> 26/12/2025</td><td><i class="far fa-clock"></i> 19:27</td></tr></tbody>
                     </table>
                 </div>
             </div>    </main>
 
-    
     <footer class="footer">
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
@@ -529,7 +564,6 @@
         </div>
     </footer>
 
-    
     <script>
         
         function moveSlider(input) {
