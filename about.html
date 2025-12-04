@@ -84,11 +84,21 @@
         }
 
         .nav {
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;        
+    overflow-y: hidden;      
+    white-space: nowrap;
+    
+     
+    scrollbar-width: none;   
+    -ms-overflow-style: none;   
+}
+
+ 
+.nav::-webkit-scrollbar {
+    display: none;
+}
 
         .nav a {
             color: var(--white);
