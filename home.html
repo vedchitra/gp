@@ -115,13 +115,15 @@
         }
 
          
-        .nav a:hover, .nav a.active {
-            background-color: #cc7a00 !important;  
-            color: #ffffff !important;            
-            border-radius: 5px;                   
-            font-size: 15px !important;           
-            font-weight: bold;                    
-            box-shadow: none;                     
+        .nav a {
+            color: var(--white);
+            padding: 0 20px;  
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;        
+            align-items: center;  
+            height: 100%;         
+            transition: none;     
         }
 
          
@@ -592,7 +594,7 @@
     
     <div class="nav-wrapper">
         <nav class="nav">
-            <a href="home.html" class="active">मुख्यपृष्ठ</a>
+            <a href="home.html" class="active">होमपेज</a>
             <a href="about.html" class="">आमच्याबद्दल</a>
             <a href="services.html" class="">नागरिक सुविधा</a>
             <a href="projects.html" class="">विकास कामे</a>
@@ -651,9 +653,6 @@
             <div class="slideshow-container">
                 
                 <div class="mySlides fade" style="display: block;">
-                    <img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp8254557.jpg" class="slider-img">
-                </div>
-                <div class="mySlides fade" style="display: none;">
                     <img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp3175723.jpg" class="slider-img">
                 </div>
                 <div class="mySlides fade" style="display: none;">
@@ -668,7 +667,7 @@
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 <div class="dots-container">
-                    <span class="dot active" onclick="currentSlide(1)"></span><span class="dot " onclick="currentSlide(2)"></span><span class="dot " onclick="currentSlide(3)"></span><span class="dot " onclick="currentSlide(4)"></span><span class="dot " onclick="currentSlide(5)"></span>
+                    <span class="dot active" onclick="currentSlide(1)"></span><span class="dot " onclick="currentSlide(2)"></span><span class="dot " onclick="currentSlide(3)"></span><span class="dot " onclick="currentSlide(4)"></span>
                 </div>
             </div>
             
