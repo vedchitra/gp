@@ -115,15 +115,13 @@
         }
 
          
-        .nav a {
-            color: var(--white);
-            padding: 0 20px;  
-            font-weight: 600;
-            font-size: 15px;
-            display: flex;        
-            align-items: center;  
-            height: 100%;         
-            transition: none;     
+        .nav a:hover, .nav a.active {
+            background-color: #cc7a00 !important;  
+            color: #ffffff !important;            
+            border-radius: 5px;                   
+            font-size: 15px !important;           
+            font-weight: bold;                    
+            box-shadow: none;                     
         }
 
          
@@ -661,10 +659,16 @@
                 <div class="mySlides fade" style="display: none;">
                     <img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp3001820.png" class="slider-img">
                 </div>
+                <div class="mySlides fade" style="display: none;">
+                    <img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp1139359.jpg" class="slider-img">
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                    <img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp8645187.jpg" class="slider-img">
+                </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 <div class="dots-container">
-                    <span class="dot active" onclick="currentSlide(1)"></span><span class="dot " onclick="currentSlide(2)"></span><span class="dot " onclick="currentSlide(3)"></span>
+                    <span class="dot active" onclick="currentSlide(1)"></span><span class="dot " onclick="currentSlide(2)"></span><span class="dot " onclick="currentSlide(3)"></span><span class="dot " onclick="currentSlide(4)"></span><span class="dot " onclick="currentSlide(5)"></span>
                 </div>
             </div>
             
