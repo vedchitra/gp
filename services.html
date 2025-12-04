@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | ग्रामपंचायत डिजिटल सेवा</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -83,11 +84,21 @@
         }
 
         .nav {
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;        
+    overflow-y: hidden;      
+    white-space: nowrap;
+    
+     
+    scrollbar-width: none;   
+    -ms-overflow-style: none;   
+}
+
+ 
+.nav::-webkit-scrollbar {
+    display: none;
+}
 
         .nav a {
             color: var(--white);
@@ -140,6 +151,27 @@
         .download-btn:hover { background: #c82333; }
 
          
+        
+         
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
          
         .quick-info-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 30px 0;
@@ -251,7 +283,7 @@
         .contact-pill {
             display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 2px solid var(--blue);
             color: var(--blue); padding: 10px 20px; border-radius: 50px; font-weight: 600;
-            font-size: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-decoration: none;
         }
         .contact-pill:hover { background: var(--blue); color: #fff; transform: translateY(-2px); }
 
@@ -482,6 +514,32 @@
         .grievance-btn:hover { transform: translateY(-3px); background: #f8d7da; }
 
          
+        .village-blogs details {
+            margin-bottom: 15px;
+        }
+        .village-blogs details[open] summary {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .village-blogs summary {
+            outline: none;
+        }
+        
+         
+        .env-stat {
+            border-bottom: 4px solid var(--secondary) !important;
+        }
+        .env-stat i {
+            color: var(--secondary) !important;
+        }
+
+         
+         
+        
+         
+         
+
+         
         .footer {
             background: var(--dark); color: #bbb; text-align: center;
             padding: 40px 20px; margin-top: 50px; font-size: 14px;
@@ -504,11 +562,13 @@
 </head>
 <body>
 
-  <div class="top-bar">
+  
+    <div class="top-bar">
         <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
         <div><i class="fas fa-language"></i> मराठी</div>
     </div>
 
+    
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -517,6 +577,7 @@
         </div>
     </header>
 
+    
     <div class="nav-wrapper">
         <nav class="nav">
             <a href="home.html" class="">मुख्यपृष्ठ</a>
@@ -531,18 +592,20 @@
         </nav>
     </div>
 
+    
     <main class="container">
         <div class="about-section">
             <h2 class="section-title">📜 नागरिक सेवा (प्रमाणपत्रे व दाखले)</h2>
             <div class="table-responsive">
-                <table class="roles-table"><thead><tr><th width="10%">अ.क्र.</th><th>प्रमाणपत्राचे नाव</th><th width="20%">लिंक</th></tr></thead><tbody><tr><td>1</td><td>जन्म प्रमाणपत्र (Birth Certificate)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>2</td><td>मृत्यू दाखला (Death Certificate)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>3</td><td>विवाह प्रमाणपत्र (Marriage Certificate)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>4</td><td>थकबाकी नसल्याचा दाखला (No Dues)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>5</td><td>दारिद्र्यरेषेखालील प्रमाणपत्र (BPL)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>6</td><td>निराधार प्रमाणपत्र (Destitute Cert)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr></tbody></table>
+                <table class="roles-table"><thead><tr><th width="10%">अ.क्र.</th><th>प्रमाणपत्राचे नाव</th><th width="20%">लिंक</th></tr></thead><tbody><tr><td>1</td><td>जन्म प्रमाणपत्र (Birth Certificate)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>2</td><td>मृत्यू दाखला (Death Certificate)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>3</td><td>विवाह प्रमाणपत्र (Marriage Certificate)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>4</td><td>थकबाकी नसल्याचा दाखला (No Dues)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr><tr><td>5</td><td>दारिद्र्यरेषेखालील प्रमाणपत्र (BPL)</td><td><a href="#" target="_blank" class="btn-small">Apply / View <i class="fas fa-external-link-alt"></i></a></td></tr></tbody></table>
             </div>
-        </div><div class="about-section text-center grievance-box">
+        </div><div class="about-section text-center grievance-box" style="background: linear-gradient(135deg, #d32f2f, #b71c1c); color: white; box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);">
             <h2 class="section-title" style="border-color:white; color:white;">पंतप्रधान / मुख्यमंत्री तक्रार निवारण</h2>
             <p style="color:white; font-size:16px;">आपल्या तक्रारी शासनापर्यंत पोहोचवण्यासाठी खालील पोर्टलचा वापर करा.</p>
-            <a href="https://grievances.maharashtra.gov.in/mr" target="_blank" class="grievance-btn"><i class="fas fa-gavel"></i> आपले सरकार - तक्रार निवारण पोर्टल</a>
+            <a href="https://grievances.maharashtra.gov.in/mr" target="_blank" class="grievance-btn" style="display: inline-block; background: white; color: #d32f2f; padding: 15px 35px; border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); margin-top: 15px;"><i class="fas fa-gavel"></i> आपले सरकार - तक्रार निवारण पोर्टल</a>
         </div>    </main>
 
+    
     <footer class="footer">
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
@@ -555,6 +618,7 @@
         </div>
     </footer>
 
+    
     <script>
         
         function moveSlider(input) {
