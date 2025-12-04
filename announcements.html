@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | ग्रामपंचायत डिजिटल सेवा</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -83,11 +84,21 @@
         }
 
         .nav {
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;        
+    overflow-y: hidden;      
+    white-space: nowrap;
+    
+     
+    scrollbar-width: none;   
+    -ms-overflow-style: none;   
+}
+
+ 
+.nav::-webkit-scrollbar {
+    display: none;
+}
 
         .nav a {
             color: var(--white);
@@ -140,6 +151,27 @@
         .download-btn:hover { background: #c82333; }
 
          
+        
+         
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
          
         .quick-info-container {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 30px 0;
@@ -251,7 +283,7 @@
         .contact-pill {
             display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 2px solid var(--blue);
             color: var(--blue); padding: 10px 20px; border-radius: 50px; font-weight: 600;
-            font-size: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-decoration: none;
         }
         .contact-pill:hover { background: var(--blue); color: #fff; transform: translateY(-2px); }
 
@@ -482,6 +514,32 @@
         .grievance-btn:hover { transform: translateY(-3px); background: #f8d7da; }
 
          
+        .village-blogs details {
+            margin-bottom: 15px;
+        }
+        .village-blogs details[open] summary {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .village-blogs summary {
+            outline: none;
+        }
+        
+         
+        .env-stat {
+            border-bottom: 4px solid var(--secondary) !important;
+        }
+        .env-stat i {
+            color: var(--secondary) !important;
+        }
+
+         
+         
+        
+         
+         
+
+         
         .footer {
             background: var(--dark); color: #bbb; text-align: center;
             padding: 40px 20px; margin-top: 50px; font-size: 14px;
@@ -504,11 +562,13 @@
 </head>
 <body>
 
-  <div class="top-bar">
+  
+    <div class="top-bar">
         <div><i class="fas fa-phone-alt"></i> आपत्कालीन संपर्क: <strong>112</strong></div>
         <div><i class="fas fa-language"></i> मराठी</div>
     </div>
 
+    
     <header class="header-main">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Seal_of_Maharashtra.png/1200px-Seal_of_Maharashtra.png" alt="Gov Logo" class="logo">
         <div class="site-title">
@@ -517,6 +577,7 @@
         </div>
     </header>
 
+    
     <div class="nav-wrapper">
         <nav class="nav">
             <a href="home.html" class="">मुख्यपृष्ठ</a>
@@ -531,6 +592,7 @@
         </nav>
     </div>
 
+    
     <main class="container">
         
             <div class="about-section">
@@ -552,6 +614,7 @@
                 </div>
             </div>    </main>
 
+    
     <footer class="footer">
         <p>&copy; 2025 <strong>ग्रामपंचायत कार्यालय</strong>. सर्व हक्क राखीव.</p>
         <p>कार्यालय पत्ता: मुख्य चौक, ग्रामपंचायत भवन, ता. जिल्हा. पिन - 410000</p>
@@ -564,6 +627,7 @@
         </div>
     </footer>
 
+    
     <script>
         
         function moveSlider(input) {
