@@ -703,7 +703,7 @@
             <a href="about.html" class="btn-small" style="background:var(--primary); color:white; padding:10px 20px; text-decoration:none; border-radius:5px;">अधिक वाचा &rarr;</a>
         </div>
         <div class="quick-info-container">
-            <div class="stat-card"><i class="fas fa-users"></i><h3>1353</h3><p>लोकसंख्या</p></div>
+            <div class="stat-card"><i class="fas fa-users"></i><h3>1396</h3><p>लोकसंख्या</p></div>
             <div class="stat-card"><i class="fas fa-home"></i><h3>466</h3><p>एकूण घरे</p></div>
             <div class="stat-card"><i class="fas fa-graduation-cap"></i><h3>95.3</h3><p>साक्षरता दर (%)</p></div>
             <div class="stat-card"><i class="fas fa-map-signs"></i><h3>7</h3><p>प्रभाग संख्या</p></div>
@@ -715,125 +715,82 @@
             
              
             .bearer-tabs-container {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                margin: 20px 0 35px 0;
-                flex-wrap: wrap;
+                display: flex; justify-content: center; gap: 20px; margin: 20px 0 35px 0; flex-wrap: wrap;
             }
-            
             .bearer-tab-btn {
-                background: #ffffff;
-                color: var(--primary);
-                border: 2px solid var(--primary);
-                padding: 12px 35px;
-                font-size: 16px;
-                font-weight: bold;
-                border-radius: 50px;  
-                cursor: pointer;
-                transition: all 0.3s ease;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                outline: none;
+                background: #ffffff; color: var(--primary); border: 2px solid var(--primary);
+                padding: 10px 30px; font-size: 16px; font-weight: bold; border-radius: 50px;
+                cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05); outline: none;
             }
-            
-            .bearer-tab-btn:hover {
-                background: #fff5eb;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            }
-
-            .bearer-tab-btn.active {
-                background: var(--primary);  
-                color: white;
-                box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4);
-                transform: translateY(-2px);
-            }
-            
-            .bearer-tab-btn i { font-size: 18px; }
+            .bearer-tab-btn:hover { background: #fff5eb; transform: translateY(-2px); }
+            .bearer-tab-btn.active { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4); }
 
              
             .bearer-content { display: none; animation: fadeIn 0.5s; }
             .bearer-content.show { display: block; }
 
              
-            .bearer-grid {
+             
+            .bearer-row {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;  
-                gap: 30px;
-                margin-bottom: 30px;
+                width: 100%;
+                margin-bottom: 40px;  
+                position: relative;
+                clear: both;  
             }
             
+            .bearer-row.empty-row { margin-bottom: 0; height: 0; }  
+
             .bearer-card {
-                 
-                 
-                width: 28%; 
+                width: 260px;  
                 text-align: center;
-                margin-bottom: 20px;
-                position: relative;
+                padding: 0 15px;  
+                box-sizing: border-box;
             }
 
              
             .photo-box {
-                width: 140px; height: 140px; margin: 0 auto 15px;
-                border-radius: 25px;  
-                background: white;
-                border: 4px solid white;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-                overflow: hidden;
-                display: flex; align-items: center; justify-content: center;
-                transition: transform 0.3s;
+                width: 130px; height: 130px; margin: 0 auto 15px;
+                border-radius: 25px; background: white; border: 4px solid white;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden;
+                display: flex; align-items: center; justify-content: center; transition: 0.3s;
             }
             .bearer-card:hover .photo-box { transform: scale(1.05); border-color: var(--primary); }
-            
             .photo-box img { width: 100%; height: 100%; object-fit: cover; }
             .no-photo { width: 100%; height: 100%; background: #f4f6f9; color: #ccc; font-size: 40px; display: flex; align-items: center; justify-content: center; }
             
-            .info-box .designation { 
-                font-size: 13px; color: var(--primary); font-weight: bold; 
-                text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.5px;
-            }
-            .info-box .name { 
-                font-size: 17px; font-weight: 700; color: #333; line-height: 1.4; 
-            }
+            .info-box .designation { font-size: 13px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+            .info-box .name { font-size: 17px; font-weight: 700; color: #333; line-height: 1.4; }
 
              
-            @media (max-width: 992px) {
-                 .bearer-card { width: 45%; }  
-            }
-
             @media (max-width: 768px) {
                 .bearer-tabs-container { gap: 10px; }
-                .bearer-tab-btn { padding: 10px 20px; font-size: 14px; width: 100%; justify-content: center; }
+                .bearer-tab-btn { padding: 8px 15px; font-size: 14px; width: 100%; justify-content: center; }
                 
-                .bearer-grid { flex-direction: column; gap: 15px; }
+                 
+                .bearer-row { 
+                    flex-direction: column; 
+                    gap: 15px; 
+                    margin-bottom: 15px; 
+                }
+                
                 .bearer-card { 
                     width: 100%; 
                     display: flex; 
                     align-items: center; 
                     text-align: left; 
                     background: white; 
-                    padding: 12px; 
+                    padding: 10px; 
                     border-radius: 12px; 
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
                     border: 1px solid #eee;
-                    margin-bottom: 0;
                 }
-                .photo-box { 
-                    width: 75px; height: 75px; 
-                    margin: 0 15px 0 0; 
-                    border-radius: 15px; 
-                    border: 2px solid #fff;
-                    flex-shrink: 0;
-                    box-shadow: none;
-                }
+                .photo-box { width: 70px; height: 70px; margin: 0 15px 0 0; flex-shrink: 0; box-shadow: none; border: 2px solid #fff; }
                 .bearer-card:hover .photo-box { transform: none; }
                 .info-box { flex: 1; }
-                .info-box .designation { font-size: 12px; margin-bottom: 2px; }
-                .info-box .name { font-size: 15px; }
             }
             
             @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -841,35 +798,20 @@
         
         <script>
             function toggleBearerTab(selectedId) {
-                var repsContent = document.getElementById('content_reps');
-                var officersContent = document.getElementById('content_officers');
-                var repsBtn = document.getElementById('btn_reps');
-                var officersBtn = document.getElementById('btn_officers');
+                
+                document.getElementById('content_reps').classList.remove('show');
+                document.getElementById('content_officers').classList.remove('show');
+                document.getElementById('btn_reps').classList.remove('active');
+                document.getElementById('btn_officers').classList.remove('active');
 
                 
-                
-                repsContent.classList.remove('show');
-                officersContent.classList.remove('show');
-                repsBtn.classList.remove('active');
-                officersBtn.classList.remove('active');
-
-                
-                
-                
-                
-                
-                var targetContent = document.getElementById('content_' + selectedId);
-                var targetBtn = document.getElementById('btn_' + selectedId);
-                
-                
-                targetContent.classList.add('show');
-                targetBtn.classList.add('active');
+                document.getElementById('content_' + selectedId).classList.add('show');
+                document.getElementById('btn_' + selectedId).classList.add('active');
             }
         </script>
         <div class="about-section bearers-section">
             <h2 class="section-title text-center">सन्मानीय नेते</h2>
-            <div class="bearer-grid">
-                
+            <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4779184.png" alt="श्री. देवेंद्र फडणवीस"></div>
                         <div class="info-box">
@@ -890,8 +832,7 @@
                             <div class="designation">उपमुख्यमंत्री</div>
                             <div class="name">श्री. अजित पवार</div>
                         </div>
-                    </div>
-            </div>
+                    </div></div>
             <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
             <div class="bearer-tabs-container">
                 <button id="btn_reps" class="bearer-tab-btn" onclick="toggleBearerTab('reps')">
@@ -903,7 +844,7 @@
             </div>
 
             <div id="content_reps" class="bearer-content">
-                <div class="bearer-grid">
+                <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
@@ -917,7 +858,8 @@
                             <div class="designation">पालकमंत्री</div>
                             <div class="name">श्री. प्रकाश आबिटकर</div>
                         </div>
-                    </div>
+                    </div></div>
+                <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
@@ -931,7 +873,8 @@
                             <div class="designation">पंचायत समिती सभापती</div>
                             <div class="name">-</div>
                         </div>
-                    </div>
+                    </div></div>
+                <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
@@ -949,7 +892,7 @@
             </div>
 
             <div id="content_officers" class="bearer-content">
-                <div class="bearer-grid">
+                <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
@@ -963,7 +906,8 @@
                             <div class="designation">ZP मुख्य कार्यकारी अधिकारी</div>
                             <div class="name">श्री. कार्तिकेयन एस.</div>
                         </div>
-                    </div>
+                    </div></div>
+                <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
@@ -977,7 +921,8 @@
                             <div class="designation">गटविकास अधिकारी</div>
                             <div class="name">-</div>
                         </div>
-                    </div>
+                    </div></div>
+                <div class="bearer-row">
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
