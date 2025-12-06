@@ -703,7 +703,7 @@
             <a href="about.html" class="btn-small" style="background:var(--primary); color:white; padding:10px 20px; text-decoration:none; border-radius:5px;">अधिक वाचा &rarr;</a>
         </div>
         <div class="quick-info-container">
-            <div class="stat-card"><i class="fas fa-users"></i><h3>1366</h3><p>लोकसंख्या</p></div>
+            <div class="stat-card"><i class="fas fa-users"></i><h3>1377</h3><p>लोकसंख्या</p></div>
             <div class="stat-card"><i class="fas fa-home"></i><h3>466</h3><p>एकूण घरे</p></div>
             <div class="stat-card"><i class="fas fa-graduation-cap"></i><h3>95.3</h3><p>साक्षरता दर (%)</p></div>
             <div class="stat-card"><i class="fas fa-map-signs"></i><h3>7</h3><p>प्रभाग संख्या</p></div>
@@ -711,103 +711,199 @@
             <div class="stat-card"><i class="fas fa-hand-holding-water"></i><h3>3</h3><p>पाण्याचे स्रोत</p></div>
         </div>
         <style>
-             
             .bearers-section { padding: 20px 0; }
-            .bearer-tabs { display: flex; justify-content: center; margin: 20px 0; gap: 15px; flex-wrap: wrap; }
-            .bearer-tab-btn {
-                padding: 12px 25px; border: none; background: #e0e0e0; cursor: pointer;
-                font-size: 16px; font-weight: bold; border-radius: 30px; transition: 0.3s;
-                color: #555; outline: none;
-            }
-            .bearer-tab-btn.active { background: var(--primary); color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
             
              
-            .bearer-content { display: none; animation: fadeIn 0.5s; }
-            .bearer-content.active { display: block; }
-            
+            .bearer-toggle-btn {
+                width: 100%;
+                padding: 15px;
+                background: #f1f3f5;
+                border: 1px solid #ddd;
+                text-align: left;
+                font-size: 18px;
+                font-weight: bold;
+                color: var(--blue);
+                cursor: pointer;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                transition: 0.3s;
+                display: flex; justify-content: space-between; align-items: center;
+            }
+            .bearer-toggle-btn:hover { background: #e9ecef; }
+            .bearer-toggle-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+            .bearer-toggle-btn::after { content: '+'; font-size: 20px; font-weight: bold; }
+            .bearer-toggle-btn.active::after { content: '-'; }
+
+             
+            .bearer-content { display: none; padding: 20px 0; animation: fadeIn 0.5s; }
+            .bearer-content.show { display: block; }
+
              
             .bearer-grid {
-                display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;  
+                gap: 30px;
             }
-            
-             
             .bearer-card {
-                width: 220px; text-align: center; margin-bottom: 20px;
+                width: 30%;  
+                text-align: center;
+                margin-bottom: 20px;
             }
+
+             
             .photo-box {
-                width: 140px; height: 140px; margin: 0 auto 15px;
+                width: 130px; height: 130px; margin: 0 auto 10px;
                 border-radius: 25px;  
                 background: white;
                 border: 4px solid white;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
                 overflow: hidden;
                 display: flex; align-items: center; justify-content: center;
             }
-            .photo-box img {
-                width: 100%; height: 100%; object-fit: cover;
-                background: white;  
-            }
-            .no-photo {
-                width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-                background: #f0f0f0; color: #ccc; font-size: 40px;
-            }
-            .info-box .designation {
-                font-size: 13px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin-bottom: 5px;
-            }
-            .info-box .name {
-                font-size: 16px; font-weight: 700; color: #333; line-height: 1.3;
-            }
+            .photo-box img { width: 100%; height: 100%; object-fit: cover; }
+            .no-photo { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #eee; color: #aaa; font-size: 40px; }
             
+            .info-box .designation { font-size: 13px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+            .info-box .name { font-size: 16px; font-weight: 700; color: #333; }
+
              
             @media (max-width: 768px) {
-                .bearer-grid { flex-direction: column; align-items: center; }
-                .bearer-card { width: 100%; display: flex; align-items: center; text-align: left; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-                .photo-box { width: 80px; height: 80px; margin: 0 15px 0 0; border-radius: 15px; border: 2px solid white; }
+                .bearer-grid { flex-direction: column; gap: 15px; }
+                .bearer-card { 
+                    width: 100%; 
+                    display: flex; 
+                    align-items: center; 
+                    text-align: left; 
+                    background: white; 
+                    padding: 10px; 
+                    border-radius: 10px; 
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+                    border: 1px solid #eee;
+                }
+                .photo-box { 
+                    width: 70px; height: 70px; 
+                    margin: 0 15px 0 0; 
+                    border-radius: 15px; 
+                    border: 2px solid #fff;
+                    flex-shrink: 0;
+                }
                 .info-box { flex: 1; }
                 .info-box .name { font-size: 15px; }
             }
-
-            @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+            
+            @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
         </style>
         
         <script>
-            function openBearerTab(evt, tabName) {
-                var i, content, tablinks;
+            function toggleBearerSection(id) {
+                var content = document.getElementById('content_' + id);
+                var btn = document.getElementById('btn_' + id);
                 
-                content = document.getElementsByClassName("bearer-content");
-                for (i = 0; i < content.length; i++) {
-                    content[i].style.display = "none";
-                    content[i].classList.remove("active");
+                
+                var otherId = (id === 'reps') ? 'officers' : 'reps';
+                var otherContent = document.getElementById('content_' + otherId);
+                var otherBtn = document.getElementById('btn_' + otherId);
+                
+                
+                if(otherContent) otherContent.classList.remove('show');
+                if(otherBtn) otherBtn.classList.remove('active');
+
+                
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                    btn.classList.remove('active');
+                } else {
+                    content.classList.add('show');
+                    btn.classList.add('active');
                 }
-                
-                tablinks = document.getElementsByClassName("bearer-tab-btn");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                
-                document.getElementById(tabName).style.display = "block";
-                document.getElementById(tabName).classList.add("active");
-                evt.currentTarget.className += " active";
             }
         </script>
         <div class="about-section bearers-section">
-             <div class="code-conduct-notice text-center" style="background:#fff3cd; color:#856404; padding:10px; border-radius:5px; margin-bottom:20px;">
-                <i class="fas fa-info-circle"></i> सध्या आचारसंहिता लागू असल्याने राजकीय पदाधिकाऱ्यांची माहिती लपवण्यात आली आहे.
-             </div>
-             <h2 class="section-title text-center">प्रशासकीय अधिकारी</h2>
-             <div class="bearer-grid">
+            <h2 class="section-title text-center">सन्मानीय नेते</h2>
+            <div class="bearer-grid" style="margin-bottom: 30px;">
+                
                     <div class="bearer-card">
-                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="photo-box"><img src="https://raw.githubusercontent.com/vedchitra/gp/main/assets/gp4779184.png" alt="श्री. देवेंद्र फडणवीस"></div>
                         <div class="info-box">
-                            <div class="designation">ग्रामविकास प्रधान सचिव</div>
-                            <div class="name"></div>
+                            <div class="designation">मुख्यमंत्री</div>
+                            <div class="name">श्री. देवेंद्र फडणवीस</div>
                         </div>
                     </div>
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
+                            <div class="designation">उपमुख्यमंत्री</div>
+                            <div class="name">श्री. एकनाथ शिंदे</div>
+                        </div>
+                    </div>
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">उपमुख्यमंत्री</div>
+                            <div class="name">श्री. अजित पवार</div>
+                        </div>
+                    </div>
+            </div>
+            <button id="btn_reps" class="bearer-toggle-btn" onclick="toggleBearerSection('reps')">
+                <i class="fas fa-users"></i> लोकप्रतिनिधी
+            </button>
+            <div id="content_reps" class="bearer-content">
+                <div class="bearer-grid">
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">ग्रामविकास मंत्री</div>
+                            <div class="name">-</div>
+                        </div>
+                    </div>
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">पालकमंत्री</div>
+                            <div class="name">श्री. प्रकाश आबिटकर</div>
+                        </div>
+                    </div>
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">जिल्हा परिषद अध्यक्ष</div>
+                            <div class="name">-</div>
+                        </div>
+                    </div>
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">पंचायत समिती सभापती</div>
+                            <div class="name">-</div>
+                        </div>
+                    </div>
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">सरपंच</div>
+                            <div class="name">-</div>
+                        </div>
+                    </div>
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
+                            <div class="designation">उपसरपंच</div>
+                            <div class="name">-</div>
+                        </div>
+                    </div></div>
+            </div>
+
+            <button id="btn_officers" class="bearer-toggle-btn" onclick="toggleBearerSection('officers')">
+                <i class="fas fa-user-tie"></i> प्रशासकीय अधिकारी
+            </button>
+            <div id="content_officers" class="bearer-content">
+                <div class="bearer-grid">
+                    <div class="bearer-card">
+                        <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
+                        <div class="info-box">
                             <div class="designation">जिल्हाधिकारी</div>
-                            <div class="name"></div>
+                            <div class="name">-</div>
                         </div>
                     </div>
                     <div class="bearer-card">
@@ -821,16 +917,17 @@
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
                             <div class="designation">गटविकास अधिकारी</div>
-                            <div class="name"></div>
+                            <div class="name">-</div>
                         </div>
                     </div>
                     <div class="bearer-card">
                         <div class="photo-box"><div class="no-photo"><i class="fas fa-user"></i></div></div>
                         <div class="info-box">
                             <div class="designation">ग्रामपंचायत अधिकारी</div>
-                            <div class="name"></div>
+                            <div class="name">-</div>
                         </div>
-                    </div></div></div>
+                    </div></div>
+            </div></div>
         <div class="news-section">
             <div class="news-header"><i class="fas fa-bullhorn"></i> ताज्या बातम्या व अपडेट्स</div>
             <div class="news-content">
