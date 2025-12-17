@@ -1,0 +1,21 @@
+{
+  "name": "नगर ग्रामपंचायत",
+  "short_name": "नगर ग्रामपंच...",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF9933",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "[object Object]",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "[object Object]",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
