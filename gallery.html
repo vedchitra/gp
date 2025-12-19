@@ -1056,7 +1056,7 @@ body {
         </style><div class="about-section">
                 <h2 class="section-title">📸 फोटो गॅलरी</h2>
                 <div class="gallery-grid"><div class="gallery-item photo-item g-hidden">
-               <img src="https://gram1.bizc.in/assets/gp2796630.webp" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery Photo">
+               <img src="https://gram1.bizc.in/assets/gp3206440.webp" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery Photo">
            </div><div class="gallery-item photo-item g-hidden">
                <img src="https://gram1.bizc.in/assets/gp3785081.webp" loading="lazy" onclick="openLightbox(this.src)" alt="Gallery Photo">
            </div><div class="gallery-item photo-item g-hidden">
@@ -1316,47 +1316,10 @@ function googleTranslateElementInit() {
         if (e.target.tagName.toLowerCase() === 'img') {
             
             
-            var hasRetried = e.target.getAttribute('data-retried');
-
-            if (!hasRetried) {
-                
-                
-                e.target.setAttribute('data-retried', 'true');
-                
-                setTimeout(function() {
-                    var originalSrc = e.target.src;
-                    
-                    var separator = originalSrc.includes('?') ? '&' : '?';
-                    e.target.src = originalSrc + separator + 'retry=' + new Date().getTime();
-                }, 2500); 
-                
-                return; 
-            }
-
-            
-            
-            
-
-            
-            if(e.target.getAttribute('data-fallback-applied') === 'true') return;
-            e.target.setAttribute('data-fallback-applied', 'true');
-
-            
             e.target.style.display = 'none';
-
-            
-            var placeholder = document.createElement('div');
-            placeholder.className = 'custom-img-placeholder';
             
             
-            placeholder.innerHTML = `
-                <i class="fas fa-image fa-3x"></i>
-                <p>इमेज लोड होत आहे...<br>
-                <span style="font-size:12px; font-weight:normal; color:#888;">इंटरनेट स्लो असू शकते किंवा इमेज अपडेट होत आहे.</span></p>
-            `;
-
-            // 4. हा प्लेसहोल्डर मूळ इमेजच्या जागी (त्याच्या खाली) जोडा
-            e.target.parentNode.insertBefore(placeholder, e.target.nextSibling);
+            
         }
     }, true); 
 </script>
